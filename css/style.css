@@ -126,33 +126,17 @@ nav ul li a:hover {
 
 /* Research */
 #research {
-    position: relative;
-    background-image: url('images/desks.jpg');
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    height: 400px;
-    color: white;
-    padding: 50px 0;
-  
-#research {
-  background-color: #f4f4f4;
-  padding: 60px 0;
-  text-align: center;
+    background-image: url('your-image.jpg'); /* Add your image path */
+    background-size: cover; /* Ensure the image covers the entire section */
+    background-position: center center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent the image from repeating */
+    color: white; /* Text color (white) to contrast with the background */
+    padding: 50px 20px; /* Padding for spacing inside the section */
+    text-align: center; /* Center align text */
+    position: relative; /* Position relative to place the overlay */
 }
 
-#research h2 {
-  font-size: 2.5rem;
-  margin-bottom: 30px;
-}
-
-#research p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-  line-height: 1.6;
-}
-
-/* Add a dark overlay for better text contrast */
+/* Optional: Dark overlay to improve text contrast */
 #research::before {
     content: "";
     position: absolute;
@@ -160,13 +144,27 @@ nav ul li a:hover {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Dark background with 50% opacity */
+    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
     z-index: 1; /* Make sure the overlay is below the text */
 }
 
+/* Container for the text inside the section */
 #research .container {
-    position: relative;
-    z-index: 2; /* Make sure the text appears above the overlay */
+    position: relative; /* Ensure the text stays above the overlay */
+    z-index: 2; /* Higher z-index to ensure text is above the overlay */
+}
+
+/* Optional: Style the heading */
+#research h2 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+/* Optional: Style the paragraph */
+#research p {
+    font-size: 18px;
+    max-width: 800px;
+    margin: 0 auto;
 }
 
 /* About Section */
