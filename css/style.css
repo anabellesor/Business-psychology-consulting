@@ -126,6 +126,16 @@ nav ul li a:hover {
 
 /* Research */
 #research {
+    position: relative;
+    background-image: url('images/desks.jpg');
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+    height: 400px;
+    color: white;
+    padding: 50px 0;
+  
+#research {
   background-color: #f4f4f4;
   padding: 60px 0;
   text-align: center;
@@ -140,16 +150,6 @@ nav ul li a:hover {
   font-size: 1.2rem;
   margin-bottom: 20px;
   line-height: 1.6;
-
-#research {
-    position: relative;
-    background-image: url('images/desks.jpg');
-    background-size: cover;
-    background-position: center center;
-    background-repeat: no-repeat;
-    height: 400px;
-    color: white;
-    padding: 50px 0;
 }
 
 /* Add a dark overlay for better text contrast */
