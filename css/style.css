@@ -124,6 +124,24 @@ nav ul li a:hover {
   line-height: 1.6;
 }
 
+/* Research */
+#research {
+  background-color: #fff;
+  padding: 60px 0;
+  text-align: center;
+}
+
+#research h2 {
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
+
+#research p {
+  font-size: 1.2rem;
+  margin-bottom: 20px;
+  line-height: 1.6;
+}
+
 /* About Section */
 #about {
   background-color: #fff;
