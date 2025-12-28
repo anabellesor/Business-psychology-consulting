@@ -7,6 +7,8 @@
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
+
+  <!-- Header -->
   <header>
     <div class="container">
       <h1>Business Psychology Consulting</h1>
@@ -20,44 +22,68 @@
     </div>
   </header>
 
+  <!-- Hero Section -->
+  <section id="hero">
+    <div class="hero-container">
+      <div class="hero-text">
+        <h2>Empowering Your Business with Psychological Insights</h2>
+        <p>Maximize employee performance and satisfaction through proven business psychology strategies.</p>
+        <a href="#contact" class="btn">Get in Touch</a>
+      </div>
+      <div class="hero-image">
+        <img src="your-image.jpg" alt="Business Consultation">
+      </div>
+    </div>
+  </section>
+
+  <!-- About Us Section -->
   <section id="about">
     <div class="container">
       <h2>About Us</h2>
-      <p>We provide expert consulting services in business psychology to improve employee performance, engagement, and satisfaction.</p>
+      <p>At Business Psychology Consulting, we specialize in improving organizational performance and workplace well-being using psychological principles. Our tailored services help organizations foster positive environments and boost employee satisfaction.</p>
     </div>
   </section>
 
+  <!-- Services Section -->
   <section id="services">
     <div class="container">
       <h2>Our Services</h2>
-      <ul>
-        <li>Organizational Psychology</li>
-        <li>Employee Wellness Programs</li>
-        <li>Workplace Performance Optimization</li>
-        <li>Team Dynamics and Leadership Training</li>
-      </ul>
+      <div class="service-item">
+        <h3>Organizational Psychology</h3>
+        <p>We use psychological assessments to improve organizational structure, efficiency, and employee engagement.</p>
+      </div>
+      <div class="service-item">
+        <h3>Employee Wellness Programs</h3>
+        <p>Our wellness programs focus on mental health, work-life balance, and creating a supportive environment for employees.</p>
+      </div>
+      <div class="service-item">
+        <h3>Leadership Development</h3>
+        <p>We offer training for leadership teams to improve communication, decision-making, and conflict resolution within the company.</p>
+      </div>
     </div>
   </section>
 
+  <!-- Contact Form Section -->
   <section id="contact">
     <div class="container">
       <h2>Contact Us</h2>
       <form id="contactForm">
         <label for="name">Full Name</label>
         <input type="text" id="name" name="name" required>
-
+        
         <label for="email">Email Address</label>
         <input type="email" id="email" name="email" required>
-
+        
         <label for="message">Message</label>
         <textarea id="message" name="message" rows="4" required></textarea>
 
-        <button type="submit">Send Message</button>
+        <button type="submit" class="btn">Send Message</button>
       </form>
       <p id="formStatus"></p>
     </div>
   </section>
 
+  <!-- Footer -->
   <footer>
     <div class="container">
       <p>&copy; 2025 Business Psychology Consulting. All rights reserved.</p>
