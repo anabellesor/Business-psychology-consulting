@@ -141,7 +141,6 @@ nav ul li a:hover {
   margin-bottom: 20px;
   line-height: 1.6;
 
-.hero-section {
   position: relative; /* Important for layering the text */
   background-image: url('images/desks.jpg'); /* Path to your image */
   background-size: cover; /* Ensure the image covers the entire section */
