@@ -1,0 +1,61 @@
+body, ul, h1, h2, p, form {
+    margin: 0;
+    padding: 0;
+}
+body {
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+}
+
+/* Hero / Header */
+#hero {
+    background: #f4f4f4;
+    text-align: center;
+    padding: 80px 20px;
+}
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+.nav-links li {
+    display: inline;
+    margin-left: 15px;
+}
+.nav a {
+    text-decoration: none;
+    color: #333;
+}
+.btn-primary {
+    background: #0077cc;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
+}
+
+/* Sections */
+.section {
+    padding: 40px 20px;
+    text-align: center;
+}
+.service-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.card {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0 0 4px rgba(0,0,0,0.1);
+}
+
+/* Contact form */
+#contactForm input, #contactForm textarea {
+    width: 100%;
+    margin: 8px 0;
+    padding: 10px;
+}
