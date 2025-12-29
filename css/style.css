@@ -57,13 +57,13 @@ nav ul li a:hover {
 /* Hero Section */
 #hero {
   background-image: url('images/hero-bg.jpg'); /* Your hero image path */
-  background-size: cover; /* Ensure the image covers the section */
+  background-size: cover; /* Ensure the image covers the entire section */
   background-position: center center; /* Center the image */
   background-attachment: fixed; /* Keeps background fixed when scrolling */
   color: white;
-  padding: 100px 20px; /* Padding for the content */
+  padding: 100px 0; /* Padding to create space around the content */
   text-align: center;
-  position: relative; /* To ensure text is above the background */
+  position: relative; /* Make sure text stays above the image */
 }
 
 #hero::before {
@@ -74,11 +74,11 @@ nav ul li a:hover {
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.5); /* Dark overlay for better readability */
-  z-index: 1; /* Keeps the overlay behind the text */
+  z-index: 1; /* Place overlay behind text */
 }
 
 #hero .container {
-  position: relative; /* Ensures content stays above the background */
+  position: relative; /* Ensure content is above the background */
   z-index: 2;
 }
 
@@ -107,7 +107,7 @@ nav ul li a:hover {
   background-image: url('images/mountain.jpg'); /* Your background image path */
   background-size: cover;
   background-position: center center;
-  background-attachment: scroll; /* Background scrolls with content */
+  background-attachment: scroll; /* Scrolls with the content */
   color: white;
   padding: 100px 20px; /* Padding to give space inside the section */
   text-align: center;
