@@ -1,314 +1,62 @@
-/* General Reset */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+/* Reset & basic */
+body, ul, h1, h2, p, form {
+    margin: 0;
+    padding: 0;
 }
-
 body {
-  font-family: 'Arial', sans-serif;
-  line-height: 1.6;
-  color: #333;
-  background-color: #f8f8f8;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
 }
 
-/* Container */
-.container {
-  width: 80%;
-  margin: auto;
-  max-width: 1200px;
-}
-
-/* Header */
-header {
-  background-color: #333;
-  color: white;
-  padding: 20px 0;
-  text-align: center;
-}
-
-header h1 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
-}
-
-nav ul {
-  list-style: none;
-  display: flex;
-  justify-content: center;
-  margin-top: 15px;
-}
-
-nav ul li {
-  margin: 0 20px;
-}
-
-nav ul li a {
-  color: white;
-  text-decoration: none;
-  font-size: 1.2rem;
-  text-transform: uppercase;
-}
-
-nav ul li a:hover {
-  text-decoration: underline;
-}
-
-/* Hero Section */
+/* Hero / Header */
 #hero {
-  background: url('images/mountain.jpg') center center/cover no-repeat;
-  color: white;
-  padding: 100px 0;
-  text-align: center;
+    background: #f4f4f4;
+    text-align: center;
+    padding: 80px 20px;
+}
+.nav {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 20px;
+}
+.nav-links li {
+    display: inline;
+    margin-left: 15px;
+}
+.nav a {
+    text-decoration: none;
+    color: #333;
+}
+.btn-primary {
+    background: #0077cc;
+    color: #fff;
+    padding: 10px 20px;
+    border: none;
+    cursor: pointer;
 }
 
-.hero-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  max-width: 1000px;
-  margin: 0 auto;
+/* Sections */
+.section {
+    padding: 40px 20px;
+    text-align: center;
+}
+.service-cards {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+.card {
+    background: #fff;
+    border: 1px solid #ddd;
+    padding: 20px;
+    width: 250px;
+    box-shadow: 0 0 4px rgba(0,0,0,0.1);
 }
 
-.hero-text {
-  flex: 1;
-  padding: 20px;
-}
-
-.hero-text h2 {
-  font-size: 2.5rem;
-  margin-bottom: 15px;
-}
-
-.hero-text p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-}
-
-.hero-text .btn {
-  display: inline-block;
-  background-color: #333;
-  color: white;
-  padding: 10px 30px;
-  font-size: 1.2rem;
-  text-decoration: none;
-  border-radius: 5px;
-}
-
-.hero-image {
-  flex: 1;
-}
-
-.hero-image img {
-  width: 100%;
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-/* Our Mission */
-#ourmission {
-  background-color: #fff;
-  padding: 60px 0;
-  text-align: center;
-}
-
-#ourmission h2 {
-  font-size: 2.5rem;
-  margin-bottom: 30px;
-}
-
-#ourmission p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-  line-height: 1.6;
-}
-
-/* Research */
-#research {
-    background-image: url('your-image.jpg'); /* Add your image path */
-    background-size: cover; /* Ensure the image covers the entire section */
-    background-position: center center; /* Center the image */
-    background-repeat: no-repeat; /* Prevent the image from repeating */
-    color: white; /* Text color (white) to contrast with the background */
-    padding: 50px 20px; /* Padding for spacing inside the section */
-    text-align: center; /* Center align text */
-    position: relative; /* Position relative to place the overlay */
-}
-
-/* Optional: Dark overlay to improve text contrast */
-#research::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
+/* Contact form */
+#contactForm input, #contactForm textarea {
     width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
-    z-index: 1; /* Make sure the overlay is below the text */
-}
-
-/* Container for the text inside the section */
-#research .container {
-    position: relative; /* Ensure the text stays above the overlay */
-    z-index: 2; /* Higher z-index to ensure text is above the overlay */
-}
-
-/* Optional: Style the heading */
-#research h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
-}
-
-/* Optional: Style the paragraph */
-#research p {
-    font-size: 18px;
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-/* About Section */
-#about {
-  background-color: #fff;
-  padding: 60px 0;
-  text-align: center;
-}
-
-#about h2 {
-  font-size: 2.5rem;
-  margin-bottom: 30px;
-}
-
-#about p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-  line-height: 1.6;
-}
-
-/* Services Section */
-#services {
-  background-color: #f4f4f4;
-  padding: 60px 0;
-  text-align: center;
-}
-
-#services h2 {
-  font-size: 2.5rem;
-  margin-bottom: 40px;
-}
-
-.service-item {
-  margin: 30px;
-}
-
-.service-item h3 {
-  font-size: 1.8rem;
-  margin-bottom: 15px;
-}
-
-.service-item p {
-  font-size: 1.1rem;
-  margin-bottom: 15px;
-  line-height: 1.6;
-}
-
-/* Contact Section */
-#contact {
-  background-color: #fff;
-  padding: 60px 0;
-  text-align: center;
-}
-
-#contact h2 {
-  font-size: 2.5rem;
-  margin-bottom: 30px;
-}
-
-form {
-  max-width: 600px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-}
-
-form label {
-  font-size: 1.2rem;
-  margin-bottom: 5px;
-}
-
-form input,
-form textarea {
-  padding: 12px;
-  margin-bottom: 20px;
-  border: 2px solid #ccc;
-  border-radius: 5px;
-  font-size: 1rem;
-}
-
-form button {
-  background-color: #333;
-  color: white;
-  padding: 12px;
-  font-size: 1.2rem;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-}
-
-form button:hover {
-  background-color: #555;
-}
-
-form #formStatus {
-  font-size: 1rem;
-  color: #28a745;
-  margin-top: 10px;
-}
-
-/* Footer */
-footer {
-  background-color: #333;
-  color: white;
-  padding: 20px 0;
-  text-align: center;
-}
-
-footer p {
-  font-size: 1rem;
-}
-
-/* Responsive Design */
-@media screen and (max-width: 768px) {
-  .hero-container {
-    flex-direction: column;
-  }
-
-  .hero-text h2 {
-    font-size: 2rem;
-  }
-
-  .hero-text p {
-    font-size: 1.1rem;
-  }
-
-  .service-item {
-    margin: 15px;
-  }
-
-  #services h2 {
-    font-size: 2rem;
-  }
-
-  form label {
-    font-size: 1rem;
-  }
-
-  form input, 
-  form textarea {
-    font-size: 1rem;
-  }
-
-  form button {
-    font-size: 1.1rem;
-  }
+    margin: 8px 0;
+    padding: 10px;
 }
