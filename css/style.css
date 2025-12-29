@@ -56,24 +56,19 @@ nav ul li a:hover {
 
 /* Hero Section */
 #hero {
-  background-color: black;
+  background-image: url('images/hero-bg.jpg'); /* Your hero image path */
+  background-size: cover;
+  background-position: center center;
   color: white;
   padding: 100px 0;
   text-align: center;
+  position: relative; /* Make sure the content appears above the image */
+  z-index: 1; /* Ensure content stays above the background */
 }
 
-.hero-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 20px;
-  max-width: 1000px;
-  margin: 0 auto;
-}
-
-.hero-text {
-  flex: 1;
-  padding: 20px;
+#hero .container {
+  position: relative; /* Ensure text is above background */
+  z-index: 2;
 }
 
 .hero-text h2 {
@@ -96,30 +91,31 @@ nav ul li a:hover {
   border-radius: 5px;
 }
 
-.hero-image {
-  flex: 1;
-}
-
-.hero-image img {
-  width: 100%;
-  max-width: 600px; /* Ensure image is not too wide */
-  height: auto; /* Maintain aspect ratio */
-  border-radius: 8px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
 /* Our Mission Section */
 #ourmission {
-  position: relative;
-  padding: 40px 0;
+  background-image: url('images/mountain.jpg'); /* Your background image path */
+  background-size: cover;
+  background-position: center center;
+  color: white;
+  padding: 100px 20px;
   text-align: center;
+  position: relative; /* So that text appears above image */
 }
 
-#ourmission img {
+#ourmission::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  height: auto;
-  object-fit: cover;
-  object-position: center;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay for better text contrast */
+  z-index: 1;
+}
+
+#ourmission .container {
+  position: relative; /* Ensure the text is above the overlay */
+  z-index: 2;
 }
 
 #ourmission h2 {
@@ -135,20 +131,20 @@ nav ul li a:hover {
 #ourmission p {
   font-size: 1.125rem;
   line-height: 1.6;
-  margin: 0 auto;
   max-width: 800px;
+  margin: 0 auto;
 }
 
 /* Research Section */
 #research {
-  background-image: url('images/desks.jpg'); /* Add your image path */
+  background-image: url('images/desks.jpg'); /* Your background image path */
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
   color: white;
   padding: 50px 20px;
   text-align: center;
-  position: relative;
+  position: relative; /* Ensure the text is above the background */
 }
 
 #research::before {
@@ -163,7 +159,7 @@ nav ul li a:hover {
 }
 
 #research .container {
-  position: relative;
+  position: relative; /* Ensure the text stays above the overlay */
   z-index: 2;
 }
 
