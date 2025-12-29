@@ -108,48 +108,25 @@ nav ul li a:hover {
 }
 
 /* Our Mission */
-#ourmission {
-  background-color: #fff;
-  padding: 60px 0;
-  text-align: center;
-}
-
-#ourmission h2 {
-  font-size: 2.5rem;
-  margin-bottom: 30px;
-}
-
-#ourmission p {
-  font-size: 1.2rem;
-  margin-bottom: 20px;
-  line-height: 1.6;
-
-
- @media (max-width: 768px) {
+@media (max-width: 768px) {
   #ourmission {
-    height: auto; /* Allow the section height to adjust dynamically */
+    height: auto; /* Allow the section height to adjust dynamically on smaller screens */
   }
-
-  #ourmission img {
-    object-position: center center; /* Ensures image remains centered on smaller screens */
-  }
-
-  #ourmission div {
-    padding: 20px; /* Adjust padding for smaller screens */
-  }
-
+  
   #ourmission h2 {
-    font-size: 2rem; /* Make the text smaller for mobile */
+    font-size: 2rem; /* Make the heading slightly smaller on mobile */
   }
-
+  
   #ourmission h3 {
     font-size: 1.5rem;
   }
 
   #ourmission p {
     font-size: 1rem;
+    padding: 10px; /* Adjust padding for smaller screens */
   }
 }
+
   
 /* Research */
 #research {
