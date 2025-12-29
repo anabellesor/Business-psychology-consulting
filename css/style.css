@@ -123,8 +123,16 @@ nav ul li a:hover {
   font-size: 1.2rem;
   margin-bottom: 20px;
   line-height: 1.6;
-}
 
+
+  @media (max-width: 768px) {
+  #ourmission img {
+    object-position: center center; /* Ensures it remains centered on mobile */
+  }
+  #ourmission {
+    height: auto; /* Allow the section height to adjust dynamically */
+  }
+}
 /* Research */
 #research {
     background-image: url('your-image.jpg'); /* Add your image path */
