@@ -66,9 +66,9 @@ img {
 
 /* Research Section */
 #research {
-  width: 100%;
+  width: 100%; /* Full width of the container */
   height: 400px; /* Set a fixed height for the section */
-  position: relative;
+  position: relative; /* Ensures the text can be positioned over the image */
   overflow: hidden; /* Prevents the image from overflowing */
 }
 
@@ -82,28 +82,29 @@ img {
   position: absolute; /* Position the image behind the text */
   top: 0;
   left: 0;
-  max-width: 100%; /* Ensures the image won't stretch wider than the container */
-  max-height: 100%; /* Ensures the image won't stretch taller than the container */
+  width: 100%; /* Ensures the image takes up the full width of the section */
+  height: 100%; /* Ensures the image takes up the full height of the section */
   object-fit: cover; /* Ensures the image covers the section without distortion */
   z-index: -1; /* Keeps the image behind the text */
 }
 
 .research-content {
-  position: absolute; /* Positions text on top of the image */
+  position: absolute; /* Position the content over the image */
   top: 50%; /* Vertically centers the text */
   left: 50%; /* Horizontally centers the text */
-  transform: translate(-50%, -50%); /* Centers the content perfectly */
+  transform: translate(-50%, -50%); /* Centers the text perfectly */
   text-align: center; /* Centers the text horizontally */
   padding: 20px;
   box-sizing: border-box;
-  z-index: 1; /* Ensures the text is on top of the image */
-  color: white; /* Makes the text visible over the image */
+  z-index: 1; /* Keeps the text above the image */
+  color: white; /* Ensures the text is visible over the image */
   width: 80%; /* Optional: Control the width of the text */
 }
 
 .research-content h2, .research-content h3, .research-content p {
   margin: 0 0 10px;
 }
+
 
 /* Form and Footer */
 form input, form textarea {
