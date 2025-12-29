@@ -56,11 +56,12 @@ nav ul li a:hover {
 
 /* Hero Section */
 #hero {
-  background: url('images/mountain.jpg') center center/cover no-repeat;
+  background: black 
   color: white;
   padding: 100px 0;
   text-align: center;
 }
+
 
 .hero-container {
   display: flex;
