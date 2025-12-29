@@ -51,23 +51,28 @@
   </section>
 
 
-   <!-- Research and Assessment Section -->
-<section id="research" class="research-section">
-  <div style="position: relative; width: 100%; height: 400px;">
-    <!-- Background Image with Adjusted Contrast (Optional) -->
-    <img src="images/desks.jpg" alt="Background Image" 
-         style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; filter: brightness(70%) contrast(120%);">
+  
+<!-- Research and Assessment Section -->
+<section id="research" class="research-section" style="position: relative; width: 100%; height: 400px;">
+  <!-- Background Image with Adjusted Contrast (Behind Text) -->
+  <img src="images/desks.jpg" alt="Background Image" 
+       style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: -1;">
+
+  <!-- Brighter Text Section (Custom Text Colors) -->
+  <div style="position: absolute; top: 0; left: 0; width: 100%; padding: 20px; box-sizing: border-box; z-index: 1;">
+    <!-- Title with Custom Color -->
+    <h2 style="color: #ff5733;">Research and Assessment</h2> <!-- Custom Orange Color -->
     
-    <!-- Brighter Text Section (No Shadow, Just Pure White) -->
-    <div style="position: absolute; top: 0; left: 0; width: 100%; color: white; padding: 20px; box-sizing: border-box;">
-      <h2 style="color: #ffffff;">Research and Assessment</h2>
-      <h3 style="color: #ffffff;">Understanding Your Business</h3>
-      <p style="color: #ffffff;">
-        Our approach involves in-depth research and assessment to gain insights into your business's unique needs. By understanding your organization's dynamics, we can develop targeted strategies to enhance performance and maximize results.
-      </p>
-    </div>
+    <!-- Subtitle with Custom Color -->
+    <h3 style="color: #007BFF;">Understanding Your Business</h3> <!-- Custom Blue Color -->
+    
+    <!-- Paragraph with Custom Color -->
+    <p style="color: #28a745;">
+      Our approach involves in-depth research and assessment to gain insights into your business's unique needs. By understanding your organization's dynamics, we can develop targeted strategies to enhance performance and maximize results.
+    </p> <!-- Custom Green Color -->
   </div>
 </section>
+
 
 
 
