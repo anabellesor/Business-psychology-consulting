@@ -57,6 +57,11 @@ body {
   color: white;
   padding: 40px;
   background: rgba(0, 0, 0, 0.5);
+
+  /* Ensures that images scale properly across different screen sizes */
+img {
+  max-width: 100%;
+  height: auto;
 }
 
 /* Research Section */
@@ -84,6 +89,13 @@ body {
   height: 100%;
   object-fit: cover;
   z-index: -1;
+
+  /* Ensures that images scale properly across different screen sizes */
+img {
+  max-width: 100%;
+  height: auto;
+
+
 }
 
 /* Form and Footer */
