@@ -102,6 +102,8 @@ nav ul li a:hover {
 
 .hero-image img {
   width: 100%;
+  max-width: 600px; /* Ensure image is not too wide */
+  height: auto; /* Maintain aspect ratio */
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
@@ -139,7 +141,7 @@ nav ul li a:hover {
 
 /* Research Section */
 #research {
-  background-image: url('your-image.jpg'); /* Add your image path */
+  background-image: url('images/desks.jpg'); /* Add your image path */
   background-size: cover;
   background-position: center center;
   background-repeat: no-repeat;
