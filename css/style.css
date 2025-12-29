@@ -125,14 +125,32 @@ nav ul li a:hover {
   line-height: 1.6;
 
 
-  @media (max-width: 768px) {
-  #ourmission img {
-    object-position: center center; /* Ensures it remains centered on mobile */
-  }
+ @media (max-width: 768px) {
   #ourmission {
     height: auto; /* Allow the section height to adjust dynamically */
   }
+
+  #ourmission img {
+    object-position: center center; /* Ensures image remains centered on smaller screens */
+  }
+
+  #ourmission div {
+    padding: 20px; /* Adjust padding for smaller screens */
+  }
+
+  #ourmission h2 {
+    font-size: 2rem; /* Make the text smaller for mobile */
+  }
+
+  #ourmission h3 {
+    font-size: 1.5rem;
+  }
+
+  #ourmission p {
+    font-size: 1rem;
+  }
 }
+  
 /* Research */
 #research {
     background-image: url('your-image.jpg'); /* Add your image path */
