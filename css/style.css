@@ -56,12 +56,11 @@ nav ul li a:hover {
 
 /* Hero Section */
 #hero {
-  background: black 
+  background-color: black;
   color: white;
   padding: 100px 0;
   text-align: center;
 }
-
 
 .hero-container {
   display: flex;
@@ -107,68 +106,74 @@ nav ul li a:hover {
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Our Mission */
-@media (max-width: 768px) {
-  #ourmission {
-    height: auto; /* Allow the section height to adjust dynamically on smaller screens */
-  }
-  
-  #ourmission h2 {
-    font-size: 2rem; /* Make the heading slightly smaller on mobile */
-  }
-  
-  #ourmission h3 {
-    font-size: 1.5rem;
-  }
-
-  #ourmission p {
-    font-size: 1rem;
-    padding: 10px; /* Adjust padding for smaller screens */
-  }
+/* Our Mission Section */
+#ourmission {
+  position: relative;
+  padding: 40px 0;
+  text-align: center;
 }
 
-  
-/* Research */
+#ourmission img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  object-position: center;
+}
+
+#ourmission h2 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+#ourmission h3 {
+  font-size: 1.75rem;
+  margin-bottom: 15px;
+}
+
+#ourmission p {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  margin: 0 auto;
+  max-width: 800px;
+}
+
+/* Research Section */
 #research {
-    background-image: url('your-image.jpg'); /* Add your image path */
-    background-size: cover; /* Ensure the image covers the entire section */
-    background-position: center center; /* Center the image */
-    background-repeat: no-repeat; /* Prevent the image from repeating */
-    color: white; /* Text color (white) to contrast with the background */
-    padding: 50px 20px; /* Padding for spacing inside the section */
-    text-align: center; /* Center align text */
-    position: relative; /* Position relative to place the overlay */
+  background-image: url('your-image.jpg'); /* Add your image path */
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  color: white;
+  padding: 50px 20px;
+  text-align: center;
+  position: relative;
 }
 
-/* Optional: Dark overlay to improve text contrast */
 #research::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.5); /* Semi-transparent black overlay */
-    z-index: 1; /* Make sure the overlay is below the text */
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
+  z-index: 1;
 }
 
-/* Container for the text inside the section */
 #research .container {
-    position: relative; /* Ensure the text stays above the overlay */
-    z-index: 2; /* Higher z-index to ensure text is above the overlay */
+  position: relative;
+  z-index: 2;
 }
 
-/* Optional: Style the heading */
 #research h2 {
-    font-size: 36px;
-    margin-bottom: 20px;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
 }
 
-/* Optional: Style the paragraph */
 #research p {
-    font-size: 18px;
-    max-width: 800px;
-    margin: 0 auto;
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
 /* About Section */
@@ -314,5 +319,19 @@ footer p {
 
   form button {
     font-size: 1.1rem;
+  }
+
+  /* Adjusting 'Our Mission' on small screens */
+  #ourmission h2 {
+    font-size: 2rem;
+  }
+
+  #ourmission h3 {
+    font-size: 1.5rem;
+  }
+
+  #ourmission p {
+    font-size: 1rem;
+    padding: 10px;
   }
 }
