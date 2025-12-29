@@ -13,44 +13,98 @@ body {
   padding: 20px;
 }
 
-header {
-  border: 2px solid #333; /* Adds a 2px solid border around the header */
-  padding: 20px; /* Adds padding inside the header for spacing */
-  margin: 0; /* Ensures no extra margin outside the border */
-  background-color: #f8f8f8; /* Optional: Add background color for the header */
+/* Basic section styling */
+.custom-section {
+  padding: 50px;
+  background-color: #f4f4f4; /* Light background for the section */
+  display: flex;
+  justify-content: center; /* Center content horizontally */
+  align-items: center; /* Center content vertically */
+  height: 100vh; /* Ensure it takes up full viewport height */
+  flex-direction: column; /* Stack the content vertically */
 }
 
-header .container {
-  max-width: 1200px; /* Optional: Control the maximum width of the container */
-  margin: 0 auto; /* Centers the container horizontally */
-  text-align: center; /* Optional: Center-align the header text */
+.background-layers {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
-header h1 {
-  font-size: 2rem;
-  margin: 0;
+.bg-color-underlay {
+  background-color: rgba(0, 0, 0, 0.5); /* Optional overlay */
+  width: 100%;
+  height: 100%;
 }
 
-header nav ul {
-  list-style-type: none; /* Removes the default list bullets */
-  padding: 0;
-  margin: 0;
+.bg-media {
+  background-image: url('your-background-image.jpg'); /* Set your background media */
+  background-size: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
-header nav ul li {
-  display: inline; /* Displays the list items in a horizontal line */
-  margin: 0 15px; /* Adds some space between the links */
+.section-content {
+  display: flex;
+  justify-content: center; /* Center the content horizontally */
+  align-items: center; /* Center content vertically */
+  flex-direction: column; /* Stack the text and button vertically */
+  text-align: center;
+  width: 100%;
+  z-index: 2; /* Ensure content stays above background layers */
 }
 
-header nav ul li a {
-  text-decoration: none; /* Removes underline from links */
-  color: #333; /* Sets the color for the links */
-  font-size: 1rem;
-  font-weight: bold;
+.column-container {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 30px;
+  width: 100%;
 }
 
-header nav ul li a:hover {
-  color: #007bff; /* Optional: Changes link color on hover */
+.column {
+  width: 48%; /* Adjust the width based on the number of columns */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column; /* Align column content vertically */
+}
+
+.image-container img {
+  width: 100%;
+  height: auto;
+}
+
+.additional-content {
+  text-align: center;
+  padding: 20px;
+}
+
+.heading h1 {
+  font-size: 36px;
+  color: #333;
+}
+
+.heading p {
+  font-size: 18px;
+  color: #666;
+}
+
+.learn-more-btn {
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: white;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.learn-more-btn:hover {
+  background-color: #0056b3;
 }
 
 /* Hero Section */
