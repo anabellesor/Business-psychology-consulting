@@ -83,7 +83,7 @@ img {
 
 .research-image {
   width: 100%; /* Ensures the image fills the container */
-  height: 100%; /* Ensures the image fills the container */
+  height: 50%; /* Ensures the image fills the container */
   object-fit: cover; /* Ensures the image covers the section without distorting */
   position: absolute; /* Keeps the image positioned behind the text */
   z-index: -1; /* Keeps the image behind the text */
