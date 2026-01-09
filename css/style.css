@@ -1,239 +1,331 @@
-/* General Styles */
-body {
-  font-family: Arial, sans-serif;
-  line-height: 1.6;
-  color: #333;
+/* ============================================
+   RESET / BASE STYLES
+   ============================================ */
+
+/* Universal Box Sizing */
+*, *::before, *::after {
+  box-sizing: border-box;
   margin: 0;
   padding: 0;
 }
 
-.container {
-  width: 80%;
-  margin: 0 auto;
-  padding: 20px;
-}
-
-/* Basic section styling */
-/* Basic section styling */
-.custom-section {
-  padding: 50px;
-  background-color: #f4f4f4; /* Light background for the section */
-  display: flex;
-  justify-content: center; /* Center content horizontally */
-  align-items: center; /* Center content vertically */
-  height: 100vh; /* Ensure it takes up full viewport height */
-  flex-direction: column; /* Stack the content vertically */
-  overflow: hidden; /* Prevent overflow */
-}
-
-.background-layers {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.bg-color-underlay {
-  background-color: rgba(0, 0, 0, 0.5); /* Optional overlay */
-  width: 100%;
-  height: 100%;
-}
-
-.bg-media {
-  background-image: url('your-background-image.jpg'); /* Set your background media */
-  background-size: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-}
-
-.section-content {
-  display: flex;
-  justify-content: center; /* Center the content horizontally */
-  align-items: center; /* Center content vertically */
-  flex-direction: column; /* Stack the text and button vertically */
-  text-align: center;
-  width: 100%;
-  z-index: 2; /* Ensure content stays above background layers */
-}
-
-.column-container {
-  display: flex;
-  justify-content: space-around;
-  margin-bottom: 30px;
-  width: 100%;
-  max-width: 1200px; /* Max width to avoid content from stretching too far */
-}
-
-.column {
-  width: 48%; /* Adjust the width based on the number of columns */
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: column; /* Align column content vertically */
-}
-
-.image-container {
-  width: 100%; /* Make sure image container takes up full width */
-  max-width: 300px; /* Limit the maximum size of the images */
-  height: auto;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0 auto; /* Center images horizontally within the container */
-}
-
-.responsive-img {
-  width: 100%;
-  height: auto; /* Maintain aspect ratio */
-  max-width: 100%; /* Prevent the image from exceeding the container's size */
-}
-
-.additional-content {
-  text-align: center;
-  padding: 20px;
-}
-
-.heading h1 {
-  font-size: 36px;
+/* Body and text styling */
+body {
+  font-family: 'Arial', sans-serif;
+  line-height: 1.6;
   color: #333;
+  background-color: #f9f9f9;
 }
 
-.heading p {
-  font-size: 18px;
-  color: #666;
+/* Link styling */
+a {
+  text-decoration: none;
+  color: inherit;
 }
 
-.learn-more-btn {
-  padding: 10px 20px;
-  background-color: #007BFF;
+/* Heading styles */
+h1, h2, h3 {
+  margin-bottom: 20px;
+  font-weight: 600;
+}
+
+/* ============================================
+   HEADER / HERO SECTION
+   ============================================ */
+
+.hero-section {
+  background-color: #0044cc;
   color: white;
-  border: none;
-  cursor: pointer;
-  font-size: 16px;
-}
-
-.learn-more-btn:hover {
-  background-color: #0056b3;
-}
-
-
-/* Hero Section */
-#hero .hero {
-  position: relative;
-  background-color: #333;
-  color: white;
+  padding: 60px 20px;
   text-align: center;
-  padding: 60px 0;
 }
 
-.hero-text h2 {
+.hero-content {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.hero-image img {
+  max-width: 200px;
+  height: auto;
+}
+
+.hero-text h1 {
   font-size: 2.5rem;
-  margin-bottom: 15px;
+  margin: 20px 0;
 }
 
 .hero-text p {
   font-size: 1.125rem;
+  margin-bottom: 30px;
 }
 
-/* Mission Section */
-#ourmission {
+.hero-text .btn {
+  background-color: #ffcc00;
+  padding: 10px 20px;
+  font-size: 1rem;
+  color: #333;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.hero-text .btn:hover {
+  background-color: #e6b800;
+}
+
+/* ============================================
+   MISSION SECTION
+   ============================================ */
+
+.mission-section {
   position: relative;
-  height: 100vh;
+  padding: 60px 20px;
 }
 
-.mission-background {
-  position: relative;
-}
-
-.background-image {
-  position: absolute;
-  top: 0;
-  left: 0;
+.mission-bg img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
   z-index: -1;
 }
 
 .mission-content {
-  position: relative;
-  z-index: 2;
+  text-align: center;
   color: white;
   padding: 40px;
   background: rgba(0, 0, 0, 0.5);
-
-  /* Ensures that images scale properly across different screen sizes */
-img {
-  max-width: 100%;
-  height: auto;
+  max-width: 800px;
+  margin: 0 auto;
 }
 
-/* Research Section */
-#research {
-  width: 100%; /* Full width of the container */
-  height: 400px; /* Set a fixed height for the section */
-  position: relative; /* Ensures the text can be positioned over the image */
-  overflow: hidden; /* Prevents the image from overflowing */
+.mission-content h2 {
+  font-size: 2.5rem;
+}
+
+.mission-content h3 {
+  font-size: 1.75rem;
+  margin-top: 10px;
+}
+
+.mission-content p {
+  font-size: 1.125rem;
+  line-height: 1.6;
+}
+
+/* ============================================
+   RESEARCH SECTION
+   ============================================ */
+
+.research-section {
+  padding: 60px 20px;
+  background-color: #f1f1f1;
 }
 
 .research-container {
-  position: relative; /* Ensures the text is positioned relative to this container */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+}
+
+.research-image img {
   width: 100%;
-  height: 100%;
+  max-width: 600px;
+  height: auto;
 }
 
-.research-image {
-  position: absolute; /* Position the image behind the text */
-  top: 0;
-  left: 0;
-  width: 100%; /* Ensures the image takes up the full width of the section */
-  height: 100%; /* Ensures the image takes up the full height of the section */
-  object-fit: cover; /* Ensures the image covers the section without distortion */
-  z-index: -1; /* Keeps the image behind the text */
+.research-text {
+  flex: 1;
+  max-width: 600px;
 }
 
-.research-content {
-  position: absolute; /* Position the content over the image */
-  top: 50%; /* Vertically centers the text */
-  left: 50%; /* Horizontally centers the text */
-  transform: translate(-50%, -50%); /* Centers the text perfectly */
-  text-align: center; /* Centers the text horizontally */
+.research-text h2 {
+  font-size: 2rem;
+}
+
+.research-text h3 {
+  font-size: 1.5rem;
+  margin-top: 10px;
+}
+
+.research-text p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* ============================================
+   ABOUT SECTION
+   ============================================ */
+
+.about-section {
+  padding: 60px 20px;
+}
+
+.about-section h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+}
+
+.about-section p {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* ============================================
+   SERVICES SECTION
+   ============================================ */
+
+.services-section {
+  background-color: #0044cc;
+  color: white;
+  padding: 60px 20px;
+}
+
+.services-section h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 40px;
+  justify-items: center;
+}
+
+.service-item {
+  background-color: #fff;
   padding: 20px;
-  box-sizing: border-box;
-  z-index: 1; /* Keeps the text above the image */
-  color: white; /* Ensures the text is visible over the image */
-  width: 80%; /* Optional: Control the width of the text */
+  text-align: center;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.research-content h2, .research-content h3, .research-content p {
-  margin: 0 0 10px;
+.service-item:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
 }
 
-
-/* Form and Footer */
-form input, form textarea {
-  width: 100%;
-  padding: 10px;
+.service-item h3 {
+  font-size: 1.5rem;
   margin-bottom: 10px;
+}
+
+.service-item p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* ============================================
+   CONTACT FORM SECTION
+   ============================================ */
+
+.contact-section {
+  padding: 60px 20px;
+}
+
+.contact-section h2 {
+  font-size: 2.5rem;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+form label {
+  font-size: 1.125rem;
+  margin-bottom: 10px;
+}
+
+form input, form textarea {
+  padding: 10px;
+  font-size: 1rem;
+  margin-bottom: 20px;
   border: 1px solid #ddd;
+  border-radius: 4px;
 }
 
 form button {
-  background-color: #333;
+  padding: 12px 20px;
+  font-size: 1.125rem;
+  background-color: #0044cc;
   color: white;
-  padding: 10px 20px;
   border: none;
+  border-radius: 4px;
   cursor: pointer;
+  transition: background-color 0.3s ease;
 }
 
-footer {
-  background-color: #333;
+form button:hover {
+  background-color: #003399;
+}
+
+/* ============================================
+   FOOTER
+   ============================================ */
+
+.site-footer {
+  background-color: #222;
   color: white;
   text-align: center;
-  padding: 20px 0;
+  padding: 20px;
+  font-size: 1rem;
+}
+
+.site-footer p {
+  margin: 0;
+}
+
+/* ============================================
+   MEDIA QUERIES (RESPONSIVENESS)
+   ============================================ */
+
+/* Mobile first (already mobile-friendly, but ensure layout is fine on small screens) */
+@media (max-width: 768px) {
+  .hero-section {
+    padding: 40px 20px;
+  }
+
+  .hero-text h1 {
+    font-size: 1.75rem;
+  }
+
+  .hero-text p {
+    font-size: 1rem;
+  }
+
+  .research-container {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .research-image img {
+    max-width: 100%;
+  }
+
+  .about-section p {
+    font-size: 1rem;
+  }
+
+  .services-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .service-item {
+    max-width: 100%;
+  }
 }
