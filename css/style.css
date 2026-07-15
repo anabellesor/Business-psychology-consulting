@@ -139,6 +139,15 @@ h1, h2, h3 {
   height: auto;
 }
 
+.research-content {
+  text-align: center;
+  color: white;
+  padding: 40px;
+  background: rgba(0, 0, 0, 0.5);
+  max-width: 800px;
+  margin: 0 auto;
+}
+
 .research-text {
   flex: 1;
   max-width: 600px;
