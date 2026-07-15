@@ -34,7 +34,7 @@ h1, h2, h3 {
    ============================================ */
 
 .hero-section {
-  background-color: #0044cc;
+  background-color: #000;
   color: white;
   padding: 60px 20px;
   text-align: center;
@@ -48,16 +48,19 @@ h1, h2, h3 {
 .hero-image img {
   max-width: 200px;
   height: auto;
+  margin-bottom: 20px;
 }
 
 .hero-text h1 {
   font-size: 2.5rem;
   margin: 20px 0;
+  color: white;
 }
 
 .hero-text p {
   font-size: 1.125rem;
   margin-bottom: 30px;
+  color: white;
 }
 
 .hero-text .btn {
@@ -67,6 +70,7 @@ h1, h2, h3 {
   color: #333;
   border: none;
   cursor: pointer;
+  display: inline-block;
   transition: background-color 0.3s ease;
 }
 
