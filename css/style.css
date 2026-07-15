@@ -167,19 +167,41 @@ h1, h2, h3 {
    ============================================ */
 
 .about-section {
-  padding: 60px 20px;
+    position: relative;
+    padding: 60px 20px;
 }
 
-.about-section h2 {
-  font-size: 2rem;
-  margin-bottom: 20px;
+.about-bg img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
 }
 
-.about-section p {
-  font-size: 1.125rem;
-  line-height: 1.6;
-  max-width: 800px;
-  margin: 0 auto;
+.about-content {
+    text-align: center;
+    color: white;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.5);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-content h2 {
+    font-size: 2.5rem;
+}
+
+.about-content h3 {
+    font-size: 1.75rem;
+    margin-top: 10px;
+}
+
+.about-content p {
+    font-size: 1.125rem;
+    line-height: 1.6;
 }
 
 /* ============================================
