@@ -139,7 +139,7 @@ h1, h2, h3 {
     text-align: center;
     color: white;
     padding: 40px;
-    background: rgba(0,0,0,.5);
+    background: rgba(0, 0, 0, 0.5);
     max-width: 800px;
     margin: 0 auto;
 }
