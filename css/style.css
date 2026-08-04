@@ -150,3 +150,27 @@ input:focus,textarea:focus{border-color:#fff}
 @media(max-width:1100px){.samples-contact{padding:60px max(40px,calc((100vw - 900px)/2));grid-template-columns:360px 458px;gap:50px}}
 @media(max-width:900px){.samples-contact{min-height:0;padding:70px 40px;grid-template-columns:1fr;gap:40px}.samples-contact form{margin-top:0}.wix-contact-list{margin-top:35px}}
 @media(max-width:560px){.samples-contact{padding:60px 24px}.samples-contact .contact-details h2{height:auto;font-size:44px;line-height:1.2}.wix-contact-row{column-gap:24px}.wix-contact-row p{font-size:14px;white-space:normal}.samples-contact form{width:100%;height:auto;padding:0}.samples-contact .form-row{grid-template-columns:1fr;gap:18px}.samples-contact .form-row label,.samples-contact form>label:nth-of-type(1),.samples-contact textarea{width:100%}}
+
+/* Pixel-matched Wix Research and Assessment section */
+.wix-research{position:relative;width:100%;max-width:1348px;height:1111px;margin:0 auto;padding:0;color:#fff;text-align:center;background:linear-gradient(rgba(0,0,0,.38),rgba(0,0,0,.38)),url("https://static.wixstatic.com/media/f86fc0d3b4cb46cdb8cf0c421787a3c2.jpg/v1/fill/w_1348,h_1111,al_c,q_85,usm_0.66_1.00_0.01,enc_avif,quality_auto/f86fc0d3b4cb46cdb8cf0c421787a3c2.jpg") center/cover no-repeat}
+.wix-research-intro{position:absolute;left:0;right:0;top:76px}
+.wix-research-intro h2{width:940px;height:83px;margin:0 auto;font-family:"Syne",sans-serif;font-size:56px;font-weight:700;line-height:61.6px;letter-spacing:-1.12px}
+.wix-research-intro h2 span{background:#fff;color:#000}
+.wix-research-subtitle{width:940px;height:34px;margin:47px auto 0;font-size:24px;line-height:33.6px;letter-spacing:-.24px}
+.wix-research-subtitle span{background:#000;color:#fff}
+.wix-research-lead{width:680px;height:72px;margin:32px auto 0;font-size:16px;line-height:24px}
+.wix-research-grid{position:absolute;left:40px;top:354px;width:1268px;height:634px;display:grid;grid-template-columns:634px 634px;grid-template-rows:330px 304px}
+.wix-research-grid::before{content:"";position:absolute;left:633px;top:0;width:1px;height:634px;background:rgba(255,255,255,.75)}
+.wix-research-grid::after{content:"";position:absolute;left:0;top:328px;width:1268px;height:1px;background:rgba(255,255,255,.75)}
+.wix-research-grid article{position:relative;margin:0;padding-top:54px;text-align:center}
+.wix-research-grid article:nth-child(n+3){padding-top:55px}
+.wix-research-grid h3{width:450px;height:34px;margin:0 auto;font-size:24px;font-weight:300;line-height:33.6px}
+.wix-research-grid .wix-research-label{width:450px;height:24px;margin:27px auto 0;font-size:16px;line-height:24px}
+.wix-research-grid article>p:last-child{width:360px;margin:19px auto 0;font-size:16px;line-height:24px}
+.wix-research-grid article:nth-child(1)>p:last-child{margin-top:19px}
+.wix-research-grid article:nth-child(2)>p:last-child{margin-top:16px}
+.wix-research-grid article:nth-child(n+3)>p:last-child{margin-top:19px}
+.wix-research-button{position:absolute;left:50%;top:1016px;width:181px;height:56px;display:flex;align-items:center;justify-content:center;transform:translateX(-50%);border:1px solid transparent;border-radius:50px;background:#fff;color:#000;font-size:16px;line-height:24px}
+.wix-research-button:hover,.wix-research-button:focus-visible{background:#e7e7e7}
+@media(max-width:900px){.wix-research{height:auto;min-height:0;padding:70px 28px;background-position:center}.wix-research-intro,.wix-research-grid,.wix-research-button{position:relative;left:auto;right:auto;top:auto;transform:none}.wix-research-intro h2,.wix-research-subtitle,.wix-research-lead{width:auto;height:auto}.wix-research-intro h2{font-size:44px;line-height:1.15}.wix-research-subtitle{margin-top:35px}.wix-research-lead{margin-top:28px}.wix-research-grid{width:100%;height:auto;margin-top:50px;grid-template-columns:1fr 1fr;grid-template-rows:auto}.wix-research-grid::before{left:50%;height:100%}.wix-research-grid::after{display:none}.wix-research-grid article,.wix-research-grid article:nth-child(n+3){padding:42px 24px;border-top:1px solid rgba(255,255,255,.75)}.wix-research-grid h3,.wix-research-grid .wix-research-label,.wix-research-grid article>p:last-child{width:auto;height:auto}.wix-research-button{margin:45px auto 0}}
+@media(max-width:600px){.wix-research-grid{grid-template-columns:1fr}.wix-research-grid::before{display:none}.wix-research-grid article{padding:38px 8px}.wix-research-intro h2{font-size:38px}.wix-research-subtitle{font-size:21px}}
