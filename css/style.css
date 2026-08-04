@@ -124,3 +124,29 @@ input:focus,textarea:focus{border-color:#fff}
 .sample-video-slide:hover .sample-play,.sample-video-slide:focus-visible .sample-play{background:#fff;color:#111}
 .sample-lightbox video{display:block;width:auto;max-width:100%;max-height:80vh;margin:auto;background:#000}
 .sample-lightbox video[hidden],.sample-lightbox img[hidden]{display:none}
+
+/* Pixel-matched Wix Contact section */
+.samples-contact{width:100%;max-width:1348px;min-height:526px;margin:0 auto;padding:59px 207px 6px;display:grid;grid-template-columns:400px 458px;gap:80px;background:#000;color:#fff}
+.samples-contact .contact-details h2{height:90px;margin:0;font-family:"Syne",sans-serif;font-size:56px;font-weight:700;line-height:90px;letter-spacing:normal}
+.wix-contact-list{margin-top:59px;display:grid;grid-template-rows:29px 25px 20px 25px;row-gap:16px}
+.wix-contact-row{display:grid;grid-template-columns:25px auto;align-items:center;column-gap:39px}
+.wix-contact-row p{margin:0;font-size:16px;line-height:20px;white-space:nowrap}
+.wix-contact-icon{display:block;width:25px;height:25px;fill:#fff}
+.wix-contact-icon.icon-location{width:21px;height:29px;margin-left:2px}
+.wix-contact-icon.icon-email{width:25px;height:17px}
+.wix-contact-icon.icon-like{width:24px;height:25px;margin-left:1px}
+.wix-social-icons{display:flex;gap:7px;height:24px}
+.wix-social-icons a,.wix-social-icons img{display:block;width:24px;height:24px}
+.samples-contact form{align-self:start;width:458px;height:343px;margin-top:118px;padding:16px 18px 21px;display:block}
+.samples-contact label{display:block;font-size:14px;line-height:14px}
+.samples-contact .form-row{display:grid;grid-template-columns:202px 202px;gap:18px;margin:0 0 14px}
+.samples-contact .form-row label{width:202px}
+.samples-contact input,.samples-contact textarea{display:block;width:100%;margin-top:9px;padding:8px 10px;border:1px solid #fff;background:#000;color:#fff;font-size:14px;line-height:19px}
+.samples-contact input{height:37px}
+.samples-contact form>label:nth-of-type(1){width:421px;margin-bottom:18px}
+.samples-contact textarea{width:421px;height:86px;min-height:86px;resize:none}
+.samples-contact form>button{float:right;width:117px;height:36px;margin-top:9px;padding:0;border:0;border-radius:0;background:#fff;color:#000;font-size:14px;cursor:pointer}
+.samples-contact .form-status{clear:both;margin:0;min-height:0;font-size:12px}
+@media(max-width:1100px){.samples-contact{padding:60px max(40px,calc((100vw - 900px)/2));grid-template-columns:360px 458px;gap:50px}}
+@media(max-width:900px){.samples-contact{min-height:0;padding:70px 40px;grid-template-columns:1fr;gap:40px}.samples-contact form{margin-top:0}.wix-contact-list{margin-top:35px}}
+@media(max-width:560px){.samples-contact{padding:60px 24px}.samples-contact .contact-details h2{height:auto;font-size:44px;line-height:1.2}.wix-contact-row{column-gap:24px}.wix-contact-row p{font-size:14px;white-space:normal}.samples-contact form{width:100%;height:auto;padding:0}.samples-contact .form-row{grid-template-columns:1fr;gap:18px}.samples-contact .form-row label,.samples-contact form>label:nth-of-type(1),.samples-contact textarea{width:100%}}
