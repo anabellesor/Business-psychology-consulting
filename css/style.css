@@ -1,401 +1,68 @@
-/* ============================================
-   RESET / BASE STYLES
-   ============================================ */
-
-/* Universal Box Sizing */
-*, *::before, *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
-}
-
-/* Body and text styling */
-body {
-  font-family: 'Arial', sans-serif;
-  line-height: 1.6;
-  color: #333;
-  background-color: #f9f9f9;
-}
-
-/* Link styling */
-a {
-  text-decoration: none;
-  color: inherit;
-}
-
-/* Heading styles */
-h1, h2, h3 {
-  margin-bottom: 20px;
-  font-weight: 600;
-}
-
-/* ============================================
-   HEADER / HERO SECTION
-   ============================================ */
-
-.hero-section {
-  background-color: #f9f9f9;
-  color: white;
-  padding: 60px 20px;
-  text-align: center;
-}
-
-.hero-content {
-  max-width: 1200px;
-  margin: 0 auto;
-}
-
-.hero-image img {
-  max-width: 200px;
-  height: auto;
-  margin-bottom: 20px;
-}
-
-.hero-text h1 {
-  font-size: 2.5rem;
-  margin: 20px 0;
-  color: white;
-}
-
-.hero-text p {
-  font-size: 1.125rem;
-  margin-bottom: 30px;
-  color: white;
-}
-
-.hero-text .btn {
-    background-color: #0044cc;
-    color: white;
-    padding: 10px 20px;
-    font-size: 1rem;
-    border: none;
-    border-radius: 6px;
-    cursor: pointer;
-    display: inline-block;
-    transition: background-color 0.3s ease;
-}
-
-.hero-text .btn:hover {
-    background-color: #003399;
-}
-
-/* ============================================
-   MISSION SECTION
-   ============================================ */
-
-.mission-section {
-  position: relative;
-  padding: 60px 20px;
-}
-
-.mission-bg img {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: -1;
-}
-
-.mission-content {
-  text-align: center;
-  color: white;
-  padding: 40px;
-  background: rgba(0, 0, 0, 0.5);
-  max-width: 800px;
-  margin: 0 auto;
-}
-
-.mission-content h2 {
-  font-size: 2.5rem;
-}
-
-.mission-content h3 {
-  font-size: 1.75rem;
-  margin-top: 10px;
-}
-
-.mission-content p {
-  font-size: 1.125rem;
-  line-height: 1.6;
-}
-
-/* ============================================
-   RESEARCH SECTION
-   ============================================ */
-
-.research-section {
-    position: relative;
-    padding: 60px 20px;
-}
-
-.research-bg img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-}
-
-.research-content {
-    text-align: center;
-    color: white;
-    padding: 40px;
-    background: rgba(0, 0, 0, 0.5);
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.research-content h2 {
-    font-size: 2.5rem;
-}
-
-.research-content h3 {
-    font-size: 1.75rem;
-    margin-top: 10px;
-}
-
-.research-content p {
-    font-size: 1.125rem;
-    line-height: 1.6;
-}
-
-/* ============================================
-   ABOUT SECTION
-   ============================================ */
-
-.about-section {
-    position: relative;
-    padding: 60px 20px;
-}
-
-.about-bg img {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-}
-
-.about-content {
-    text-align: center;
-    color: white;
-    padding: 40px;
-    background: rgba(0, 0, 0, 0.5);
-    max-width: 800px;
-    margin: 0 auto;
-}
-
-.about-content h2 {
-    font-size: 2.5rem;
-}
-
-.about-content h3 {
-    font-size: 1.75rem;
-    margin-top: 10px;
-}
-
-.about-content p {
-    font-size: 1.125rem;
-    line-height: 1.6;
-}
-
-/* ============================================
-   SERVICES SECTION
-   ============================================ */
-
-.services-section {
-    position: relative;
-    min-height: 500px;
-    padding: 60px 20px;
-    overflow: hidden;
-}
-
-.services-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
-}
-
-.services-bg img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    filter: grayscale(100%);
-}
-
-.services-content {
-    position: relative;
-    z-index: 1;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 40px;
-    background: rgba(0, 0, 0, 0.5);
-}
-
-.services-content h2 {
-    color: #fff;
-    text-align: center;
-    font-size: 2.5rem;
-    margin-bottom: 40px;
-}
-
-.services-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-}
-
-.services-grid article {
-    background: rgba(255, 255, 255, 0.95);
-    padding: 25px;
-    border-radius: 8px;
-    text-align: center;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.services-grid article:hover {
-    transform: translateY(-8px);
-    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
-}
-
-.services-grid article h3 {
-    font-size: 1.5rem;
-    margin-bottom: 10px;
-    color: #333;
-}
-
-.services-grid article p {
-    font-size: 1rem;
-    line-height: 1.6;
-    color: #555;
-}
-
-/* ============================================
-   CONTACT FORM SECTION
-   ============================================ */
-
-.contact-section {
-    background-color: #f9f9f9;
-    padding: 80px 20px;
-}
-
-.contact-section h2 {
-    font-size: 2.5rem;
-    text-align: center;
-    margin-bottom: 40px;
-    color: #333;
-}
-
-.contact-section form {
-    max-width: 700px;
-    margin: 0 auto;
-    background: #fff;
-    padding: 40px;
-    border-radius: 10px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-}
-
-.contact-section label {
-    display: block;
-    margin-bottom: 8px;
-    font-weight: 600;
-    color: #333;
-}
-
-.contact-section input,
-.contact-section textarea {
-    width: 100%;
-    padding: 14px;
-    margin-bottom: 20px;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-    font-size: 1rem;
-    font-family: inherit;
-}
-
-.contact-section textarea {
-    min-height: 180px;
-    resize: vertical;
-}
-
-.contact-section button {
-    display: inline-block;
-    background: #0044cc;
-    color: #fff;
-    padding: 14px 28px;
-    border: none;
-    border-radius: 6px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background 0.3s ease;
-}
-
-.contact-section button:hover {
-    background: #003399;
-}
-
-/* ============================================
-   FOOTER
-   ============================================ */
-
-.site-footer {
-  background-color: #222;
-  color: white;
-  text-align: center;
-  padding: 20px;
-  font-size: 1rem;
-}
-
-.site-footer p {
-  margin: 0;
-}
-
-/* ============================================
-   MEDIA QUERIES (RESPONSIVENESS)
-   ============================================ */
-
-/* Mobile first (already mobile-friendly, but ensure layout is fine on small screens) */
-@media (max-width: 768px) {
-  .hero-section {
-    padding: 40px 20px;
-  }
-
-  .hero-text h1 {
-    font-size: 1.75rem;
-  }
-
-  .hero-text p {
-    font-size: 1rem;
-  }
-
-  .research-container {
-    flex-direction: column;
-    text-align: center;
-  }
-
-  .research-image img {
-    max-width: 100%;
-  }
-
-  .about-section p {
-    font-size: 1rem;
-  }
-
-  .services-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .service-item {
-    max-width: 100%;
-  }
-}
+:root{--black:#050505;--white:#fff;--paper:#f3f2ef;--line:rgba(255,255,255,.3);--max:1280px}
+*,*::before,*::after{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--black);color:var(--white);font-family:"Inter",Arial,sans-serif;font-weight:300;line-height:1.55}
+a{color:inherit;text-decoration:none}
+button,input,textarea{font:inherit}
+.sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
+.site-header{height:118px;max-width:var(--max);margin:auto;padding:0 38px;display:flex;align-items:center;justify-content:space-between;background:var(--black);position:relative;z-index:20}
+.brand{font-size:15px;letter-spacing:-.02em}
+nav{display:flex;gap:50px;font-size:15px}
+nav a{border-bottom:1px solid transparent;padding:8px 0;transition:border-color .2s}
+nav a:hover,nav a:focus-visible{border-color:#fff}
+.menu-toggle{display:none;background:none;border:0;color:#fff;padding:8px}
+.menu-toggle span:not(.sr-only){display:block;width:25px;height:1px;background:#fff;margin:6px}
+.hero{height:722px;max-width:var(--max);margin:auto;position:relative;overflow:hidden;background:#000}
+.hero-copy{position:relative;z-index:4;height:100%;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding-top:55px}
+.hero h1{font-size:clamp(54px,5.5vw,78px);line-height:.96;letter-spacing:-.055em;font-weight:500;margin:0}
+.hero-copy p{font-size:15px;margin:105px 0 55px}
+.button{display:inline-flex;justify-content:center;align-items:center;border:0;border-radius:999px;min-width:160px;padding:14px 27px;cursor:pointer;transition:transform .2s,background .2s,color .2s}
+.button:hover,.button:focus-visible{transform:translateY(-2px)}
+.button-light{background:#fff;color:#111}
+.button-dark{background:#050505;color:#fff}
+.portrait{position:absolute;background-image:url("../images/interview.jpg");background-repeat:no-repeat;background-size:620px auto;z-index:2;filter:saturate(.86)}
+.portrait-one{width:190px;height:255px;left:21%;top:30px;background-position:44% 45%}
+.portrait-two{width:140px;height:140px;left:4%;top:200px;background-position:2% 25%;background-size:430px auto}
+.portrait-three{width:225px;height:190px;right:8%;top:90px;background-position:92% 23%}
+.portrait-four{width:225px;height:225px;left:12%;bottom:75px;background-position:50% 25%;background-size:470px auto}
+.portrait-five{width:140px;height:140px;right:16%;bottom:230px;background-position:10% 30%;background-size:470px auto}
+.portrait-six{width:95px;height:190px;right:-20px;bottom:120px;background-position:94% 20%;background-size:400px auto}
+.mission{min-height:525px;display:grid;place-items:center;position:relative;background:linear-gradient(90deg,rgba(0,0,0,.65),rgba(0,0,0,.25)),url("../images/mountain.jpg") center 48%/cover fixed}
+.mission-copy{width:min(650px,calc(100% - 48px));margin-left:35%;background:rgba(0,0,0,.78);padding:60px}
+.eyebrow{text-transform:uppercase;letter-spacing:.2em;font-size:11px;font-weight:500;margin:0 0 20px}
+h2{font-size:clamp(40px,5vw,68px);font-weight:400;letter-spacing:-.05em;line-height:1.05;margin:0 0 30px}
+.mission-copy>p:last-child{font-size:18px;margin:0}
+.research{background:var(--paper);color:#111;padding:105px max(40px,calc((100vw - 1180px)/2));text-align:center}
+.research-intro{max-width:850px;margin:0 auto 70px}
+.research-intro .lead{font-size:20px;margin:0 0 12px}
+.research-intro>p:last-child{max-width:720px;margin:auto}
+.research-grid{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid #999;border-bottom:1px solid #999;margin-bottom:50px;text-align:left}
+.research-grid article{padding:34px 27px 40px;border-right:1px solid #999}
+.research-grid article:last-child{border-right:0}
+.research-grid span{font-size:11px;letter-spacing:.15em}
+.research-grid h3{font-size:26px;font-weight:400;margin:45px 0 5px}
+.research-grid p{font-size:14px}
+.research-grid .subtitle{font-size:12px;text-transform:uppercase;letter-spacing:.09em;min-height:37px}
+.services{min-height:690px;background:linear-gradient(90deg,rgba(0,0,0,.88),rgba(0,0,0,.5)),url("../images/services.png") center/cover;display:flex;align-items:center;padding:90px max(40px,calc((100vw - 1180px)/2))}
+.services-copy{width:min(750px,100%)}
+.service-list{border-top:1px solid var(--line)}
+.service-list article{display:grid;grid-template-columns:1fr 1fr;gap:30px;padding:28px 0;border-bottom:1px solid var(--line)}
+.service-list h3{font-size:22px;font-weight:400;margin:0}
+.service-list p{margin:0;color:#d4d4d4}
+.contact{max-width:var(--max);margin:auto;padding:110px 40px;display:grid;grid-template-columns:1fr 1.1fr;gap:100px;background:#000}
+.contact address{font-style:normal;margin-top:60px}
+.contact address p{margin:8px 0}
+.contact form{display:grid;gap:28px}
+.form-row{display:grid;grid-template-columns:1fr 1fr;gap:24px}
+label{display:grid;gap:8px;font-size:13px}
+input,textarea{width:100%;border:0;border-bottom:1px solid #777;background:transparent;color:#fff;padding:10px 2px;outline:0;border-radius:0}
+textarea{resize:vertical}
+input:focus,textarea:focus{border-color:#fff}
+.contact button{justify-self:start}
+.form-status{margin:0;min-height:24px;font-size:13px}
+.site-footer{max-width:var(--max);margin:auto;border-top:1px solid var(--line);padding:60px 40px;display:grid;grid-template-columns:1fr 1fr auto;gap:45px;font-size:13px;color:#ddd}
+.site-footer>div{display:flex;flex-direction:column;gap:8px}
+.site-footer p{margin:0}
+@media(max-width:800px){.site-header{height:82px;padding:0 22px}.menu-toggle{display:block}nav{display:none;position:absolute;top:82px;left:0;right:0;background:#000;padding:22px;flex-direction:column;gap:14px;border-top:1px solid #333}nav.open{display:flex}.hero{height:700px}.hero h1{font-size:50px}.hero-copy p{margin:75px 0 45px}.portrait-one{left:6%;top:45px;width:120px;height:165px}.portrait-two{display:none}.portrait-three{right:4%;top:85px;width:115px;height:130px}.portrait-four{left:3%;bottom:70px;width:125px;height:160px}.portrait-five{right:3%;bottom:85px}.portrait-six{display:none}.mission{background-attachment:scroll}.mission-copy{margin:0;padding:38px}.research{padding:80px 24px}.research-grid{grid-template-columns:1fr 1fr}.research-grid article:nth-child(2){border-right:0}.research-grid article:nth-child(-n+2){border-bottom:1px solid #999}.services{padding:80px 24px}.service-list article{grid-template-columns:1fr}.contact{padding:80px 24px;grid-template-columns:1fr;gap:60px}.site-footer{padding:45px 24px;grid-template-columns:1fr}}
+@media(max-width:500px){.hero h1{font-size:43px}.research-grid{grid-template-columns:1fr}.research-grid article{border-right:0;border-bottom:1px solid #999!important}.research-grid article:last-child{border-bottom:0!important}.form-row{grid-template-columns:1fr}.mission-copy>p:last-child{font-size:16px}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.button{transition:none}.mission{background-attachment:scroll}}
