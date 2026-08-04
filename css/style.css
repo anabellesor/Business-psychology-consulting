@@ -694,3 +694,7 @@ h3,h4,h5,h6,nav,.brand-wordmark strong,.brand-wordmark small,button{font-weight:
   .hero-copy{padding-top:18px}
   .hero-copy p{margin:32px 0 24px}
 }
+
+
+/* Give the homepage hero title more breathing room */
+.hero h1{letter-spacing:-.015em}
