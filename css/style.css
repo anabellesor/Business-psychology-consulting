@@ -181,3 +181,10 @@ input:focus,textarea:focus{border-color:#fff}
 .wix-research-grid::before,.wix-research-grid::after{display:none}
 @media(max-width:900px){.wix-research-grid{grid-template-columns:1fr 1fr;grid-template-rows:auto;gap:2px}.wix-research-grid article{border:0}}
 @media(max-width:600px){.wix-research-grid{grid-template-columns:1fr}}
+
+/* Pixel-matched Wix Mission and Vision section */
+.wix-mission{position:relative;display:block;width:100%;max-width:1348px;height:527px;min-height:0;margin:0 auto;padding:0;background:url("https://static.wixstatic.com/media/11062b_cd40ef6a654641558c2fffb28af5a409~mv2_d_4896_1908_s_2.png/v1/fill/w_1348,h_527,al_c,q_90,usm_0.66_1.00_0.01,enc_avif,quality_auto/11062b_cd40ef6a654641558c2fffb28af5a409~mv2_d_4896_1908_s_2.png") center/cover no-repeat;color:#fff}
+.wix-mission h2{position:absolute;left:40px;top:76px;width:634px;height:123px;margin:0;font-family:"Syne",sans-serif;font-size:56px;font-weight:700;line-height:61.6px;letter-spacing:-1.12px}
+.wix-mission>p{position:absolute;left:537px;top:239px;width:640px;height:134px;margin:0;font-size:24px;line-height:33.6px;letter-spacing:-.24px}
+@media(max-width:900px){.wix-mission{height:auto;min-height:527px;padding:70px 40px;background-position:center}.wix-mission h2,.wix-mission>p{position:relative;left:auto;top:auto;width:auto;height:auto}.wix-mission h2{font-size:46px;line-height:1.12}.wix-mission>p{max-width:640px;margin:80px 0 0 auto;font-size:21px;line-height:1.45}}
+@media(max-width:600px){.wix-mission{min-height:560px;padding:60px 24px}.wix-mission h2{font-size:40px}.wix-mission>p{margin-top:90px;font-size:19px}}
