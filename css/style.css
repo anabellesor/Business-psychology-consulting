@@ -708,3 +708,11 @@ h3,h4,h5,h6,nav,.brand-wordmark strong,.brand-wordmark small,button{font-weight:
 .samples-page .samples-hero-copy,
 .samples-page .samples-hero-copy:hover{border-top:0}
 .samples-page .samples-hero-copy h1{color:#fff}
+
+
+/* Compact Why Us section after removing its introductory copy */
+@media(min-width:901px){
+  .wix-research{height:930px}
+  .wix-research-grid{top:190px}
+  .wix-research-button{top:850px}
+}
