@@ -655,3 +655,8 @@ h3,h4,h5,h6,nav,.brand-wordmark strong,.brand-wordmark small,button{font-weight:
 
 /* Remove the decorative brain mark from the homepage hero */
 .hero::before{content:none;display:none}
+
+
+/* Slightly enlarge the three-line homepage hero subtitle */
+.hero-copy p{font-size:18px;line-height:1.5}
+@media(max-width:500px){.hero-copy p{font-size:17px}}
