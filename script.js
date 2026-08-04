@@ -105,26 +105,47 @@ if (carousel) {
 }
 
 
-const researchMotionItems = document.querySelectorAll(
-  '.wix-research-intro > *, .wix-research-grid article > *, .wix-research-button'
-);
+const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
-if (researchMotionItems.length && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
-  researchMotionItems.forEach((item) => item.classList.add('research-motion-item'));
-  document.documentElement.classList.add('research-motion-ready');
+if (!prefersReducedMotion) {
+  const immediateFadeItems = document.querySelectorAll(
+    '.site-header .brand, .site-header nav a, .hero .portrait, .hero-copy > *'
+  );
+  const observedFadeItems = document.querySelectorAll('.site-footer > *');
+  const observedSlideItems = document.querySelectorAll(
+    '.wix-mission > *, .wix-research-intro > *, .wix-research-grid article > *, .wix-research-button, .research-page-hero > *, .publication-card'
+  );
+
+  immediateFadeItems.forEach((item) => item.classList.add('wix-motion-fade'));
+  observedFadeItems.forEach((item) => item.classList.add('wix-motion-fade'));
+  observedSlideItems.forEach((item) => item.classList.add('wix-motion-slide'));
+  document.documentElement.classList.add('wix-page-motion-ready');
+
+  requestAnimationFrame(() => {
+    requestAnimationFrame(() => {
+      immediateFadeItems.forEach((item) => item.classList.add('is-visible'));
+    });
+  });
+
+  const revealImmediately = (items) => {
+    items.forEach((item) => item.classList.add('is-visible'));
+  };
 
   if ('IntersectionObserver' in window) {
-    const researchMotionObserver = new IntersectionObserver((entries, observer) => {
+    const motionObserver = new IntersectionObserver((entries, observer) => {
       entries.forEach((entry) => {
         if (entry.isIntersecting) {
           entry.target.classList.add('is-visible');
           observer.unobserve(entry.target);
         }
       });
-    }, { threshold: 0.14, rootMargin: '0px 0px -8% 0px' });
+    }, { threshold: 0.12, rootMargin: '0px 0px -6% 0px' });
 
-    researchMotionItems.forEach((item) => researchMotionObserver.observe(item));
+    observedFadeItems.forEach((item) => motionObserver.observe(item));
+    observedSlideItems.forEach((item) => motionObserver.observe(item));
   } else {
-    researchMotionItems.forEach((item) => item.classList.add('is-visible'));
+    revealImmediately(observedFadeItems);
+    revealImmediately(observedSlideItems);
   }
 }
+
