@@ -345,3 +345,15 @@ input:focus,textarea:focus{border-color:#fff}
   border-top-color:#91ad9e;
   transform:translateY(-3px);
 }
+
+
+/* SF Pro Display brand typography */
+:root{
+  --sf-pro-display:"SF Pro Display","SF Pro Text",-apple-system,BlinkMacSystemFont,"Helvetica Neue",Arial,sans-serif;
+}
+html,body,button,input,textarea,select,body *{
+  font-family:var(--sf-pro-display)!important;
+}
+body{font-weight:400}
+h1,h2{font-weight:600!important}
+h3,h4,h5,h6,nav,.brand-wordmark strong,.brand-wordmark small,button{font-weight:500!important}
