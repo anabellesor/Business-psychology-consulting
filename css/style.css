@@ -329,3 +329,19 @@ input:focus,textarea:focus{border-color:#fff}
   border-top-color:#91ad9e;
   transform:translateY(-3px);
 }
+
+
+/* Branding green accent for Project Samples box */
+.samples-page .samples-hero-copy{
+  border-top:4px solid #7d9d8c;
+  box-shadow:0 16px 34px rgba(0,0,0,.24);
+  transition:border-color .25s ease,transform .25s ease;
+}
+.samples-page .samples-hero-copy h1{
+  color:#7d9d8c;
+  font-weight:500;
+}
+.samples-page .samples-hero-copy:hover{
+  border-top-color:#91ad9e;
+  transform:translateY(-3px);
+}
