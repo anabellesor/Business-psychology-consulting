@@ -26,3 +26,31 @@ document.querySelector('#contactForm').addEventListener('submit', (event) => {
   status.textContent = "Thank you for contacting us. We'll get back to you soon!";
   form.reset();
 });
+
+const carousel = document.querySelector('.sample-carousel');
+
+if (carousel) {
+  const scrollSamples = (direction) => {
+    carousel.scrollBy({ left: carousel.clientWidth * direction, behavior: 'smooth' });
+  };
+
+  document.querySelector('.carousel-prev').addEventListener('click', () => scrollSamples(-1));
+  document.querySelector('.carousel-next').addEventListener('click', () => scrollSamples(1));
+
+  const lightbox = document.querySelector('.sample-lightbox');
+  const lightboxImage = lightbox.querySelector('img');
+
+  document.querySelectorAll('.sample-slide').forEach((slide) => {
+    slide.addEventListener('click', () => {
+      const image = slide.querySelector('img');
+      lightboxImage.src = image.src;
+      lightboxImage.alt = image.alt;
+      lightbox.showModal();
+    });
+  });
+
+  document.querySelector('.lightbox-close').addEventListener('click', () => lightbox.close());
+  lightbox.addEventListener('click', (event) => {
+    if (event.target === lightbox) lightbox.close();
+  });
+}
