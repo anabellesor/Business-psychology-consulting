@@ -611,3 +611,8 @@ h3,h4,h5,h6,nav,.brand-wordmark strong,.brand-wordmark small,button{font-weight:
 @media(min-width:801px) and (max-width:1050px){.hero::before{left:14%;top:35%}}
 @media(max-width:800px){.hero::before{left:15%;top:36%}}
 @media(max-width:390px){.hero::before{left:14%;top:36%}}
+
+
+/* Lower the brain mark to match the full hero heading height */
+.hero::before{top:39%}
+@media(max-width:800px){.hero::before{top:40%}}
