@@ -111,12 +111,14 @@ if (!prefersReducedMotion) {
   const immediateFadeItems = document.querySelectorAll(
     '.site-header .brand, .site-header nav a, .hero .portrait, .hero-copy > *'
   );
+  const immediateSlideItems = document.querySelectorAll('.team-profile');
   const observedFadeItems = document.querySelectorAll('.site-footer > *');
   const observedSlideItems = document.querySelectorAll(
-    '.wix-mission > *, .wix-research-intro > *, .wix-research-grid article > *, .wix-research-button, .research-page-hero h1, .about-hero > *, .team-profile'
+    '.wix-mission > *, .wix-research-intro > *, .wix-research-grid article > *, .wix-research-button, .research-page-hero h1, .about-hero > *'
   );
 
   immediateFadeItems.forEach((item) => item.classList.add('wix-motion-fade'));
+  immediateSlideItems.forEach((item) => item.classList.add('wix-motion-slide'));
   observedFadeItems.forEach((item) => item.classList.add('wix-motion-fade'));
   observedSlideItems.forEach((item) => item.classList.add('wix-motion-slide'));
   document.documentElement.classList.add('wix-page-motion-ready');
@@ -124,6 +126,7 @@ if (!prefersReducedMotion) {
   requestAnimationFrame(() => {
     requestAnimationFrame(() => {
       immediateFadeItems.forEach((item) => item.classList.add('is-visible'));
+      immediateSlideItems.forEach((item) => item.classList.add('is-visible'));
     });
   });
 
