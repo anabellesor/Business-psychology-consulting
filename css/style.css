@@ -604,3 +604,10 @@ h3,h4,h5,h6,nav,.brand-wordmark strong,.brand-wordmark small,button{font-weight:
 /* Vertically align the brain mark with the hero heading */
 .hero::before{top:34%}
 @media(max-width:800px){.hero::before{top:35%}}
+
+
+/* Fine-tune brain mark to span the full three-line hero heading */
+.hero::before{left:calc(50% - 360px);top:35%}
+@media(min-width:801px) and (max-width:1050px){.hero::before{left:14%;top:35%}}
+@media(max-width:800px){.hero::before{left:15%;top:36%}}
+@media(max-width:390px){.hero::before{left:14%;top:36%}}
