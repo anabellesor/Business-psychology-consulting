@@ -7,6 +7,8 @@ button,input,textarea{font:inherit}
 .sr-only{position:absolute;width:1px;height:1px;padding:0;margin:-1px;overflow:hidden;clip:rect(0,0,0,0);white-space:nowrap;border:0}
 .site-header{height:118px;max-width:var(--max);margin:auto;padding:0 38px;display:flex;align-items:center;justify-content:space-between;background:var(--black);position:relative;z-index:20}
 .brand{font-size:15px;letter-spacing:-.02em}
+.header-brand{display:inline-flex;align-items:center;gap:10px}
+.brand-logo{width:36px;height:36px;display:block;flex:0 0 auto}
 nav{display:flex;gap:50px;font-size:15px}
 nav a{border-bottom:1px solid transparent;padding:8px 0;transition:border-color .2s}
 nav a:hover,nav a:focus-visible{border-color:#fff}
