@@ -660,3 +660,8 @@ h3,h4,h5,h6,nav,.brand-wordmark strong,.brand-wordmark small,button{font-weight:
 /* Slightly enlarge the three-line homepage hero subtitle */
 .hero-copy p{font-size:18px;line-height:1.5}
 @media(max-width:500px){.hero-copy p{font-size:17px}}
+
+
+/* Match the hero subtitle to the Our Mission body typography */
+.hero-copy p{font-size:24px;line-height:1.4}
+@media(max-width:800px){.hero-copy p{font-size:20px;line-height:1.5}}
