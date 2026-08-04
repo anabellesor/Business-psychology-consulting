@@ -811,3 +811,13 @@ h3,h4,h5,h6,nav,.brand-wordmark strong,.brand-wordmark small,button{font-weight:
 .button-outline{border:1px solid #050505;background:transparent;color:#050505}
 .button-outline:hover,.button-outline:focus-visible{background:#050505;color:#fff}
 @media(max-width:800px){.profile-actions{display:grid}.profile-actions .button{width:100%}}
+
+
+/* LinkedIn recommendation preview as a profile selling point */
+.recommendation-preview{margin:30px 0 0;padding:24px 26px;background:#050505;color:#fff;border-left:3px solid #fff}
+.recommendation-preview>p{margin:0!important;font-size:15px!important;line-height:1.7!important}
+.recommendation-preview footer{display:grid;gap:3px;margin-top:18px}
+.recommendation-preview footer strong{font-size:15px}
+.recommendation-preview footer span{font-size:13px;color:#ccc}
+.recommendation-preview footer a{width:max-content;max-width:100%;margin-top:8px;font-size:12px;text-decoration:underline;text-underline-offset:3px}
+@media(max-width:800px){.recommendation-preview{padding:22px 20px}.recommendation-preview>p{font-size:14px!important}}
