@@ -372,3 +372,53 @@ h3,h4,h5,h6,nav,.brand-wordmark strong,.brand-wordmark small,button{font-weight:
   from{opacity:0;transform:translate(-50%,100%);clip-path:polygon(0 20%,100% 20%,100% 100%,0 100%)}
   to{opacity:1;transform:translate(-50%,0);clip-path:polygon(0 0,100% 0,100% 100%,0 100%)}
 }
+
+
+/* Site-wide Wix motion system */
+.wix-page-motion-ready .wix-motion-fade,
+.wix-page-motion-ready .wix-motion-slide{
+  opacity:0;
+  will-change:opacity,transform,clip-path;
+}
+.wix-page-motion-ready .wix-motion-slide{
+  transform:translateY(100%);
+  clip-path:polygon(0 20%,100% 20%,100% 100%,0 100%);
+}
+.wix-page-motion-ready .wix-motion-fade.is-visible{
+  animation:wix-page-fade 1200ms 1ms cubic-bezier(.445,.05,.55,.95) both;
+}
+.wix-page-motion-ready .wix-motion-slide.is-visible{
+  animation:wix-page-slide 1200ms 1ms cubic-bezier(.645,.045,.355,1) both;
+}
+@keyframes wix-page-fade{
+  from{opacity:0}
+  to{opacity:1}
+}
+@keyframes wix-page-slide{
+  from{opacity:0;transform:translateY(100%);clip-path:polygon(0 20%,100% 20%,100% 100%,0 100%)}
+  to{opacity:1;transform:translateY(0);clip-path:polygon(0 0,100% 0,100% 100%,0 100%)}
+}
+@media(min-width:901px){
+  .wix-page-motion-ready .wix-research-button.wix-motion-slide{
+    transform:translate(-50%,100%);
+  }
+  .wix-page-motion-ready .wix-research-button.wix-motion-slide.is-visible{
+    animation-name:wix-page-button-slide;
+  }
+}
+@keyframes wix-page-button-slide{
+  from{opacity:0;transform:translate(-50%,100%);clip-path:polygon(0 20%,100% 20%,100% 100%,0 100%)}
+  to{opacity:1;transform:translate(-50%,0);clip-path:polygon(0 0,100% 0,100% 100%,0 100%)}
+}
+@media(prefers-reduced-motion:reduce){
+  .wix-page-motion-ready .wix-motion-fade,
+  .wix-page-motion-ready .wix-motion-slide,
+  .wix-page-motion-ready .wix-motion-fade.is-visible,
+  .wix-page-motion-ready .wix-motion-slide.is-visible{
+    opacity:1;
+    transform:none;
+    clip-path:none;
+    animation:none;
+    will-change:auto;
+  }
+}
