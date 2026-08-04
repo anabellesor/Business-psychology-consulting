@@ -103,3 +103,28 @@ if (carousel) {
     if (event.target === lightbox) closeLightbox();
   });
 }
+
+
+const researchMotionItems = document.querySelectorAll(
+  '.wix-research-intro > *, .wix-research-grid article > *, .wix-research-button'
+);
+
+if (researchMotionItems.length && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+  researchMotionItems.forEach((item) => item.classList.add('research-motion-item'));
+  document.documentElement.classList.add('research-motion-ready');
+
+  if ('IntersectionObserver' in window) {
+    const researchMotionObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.14, rootMargin: '0px 0px -8% 0px' });
+
+    researchMotionItems.forEach((item) => researchMotionObserver.observe(item));
+  } else {
+    researchMotionItems.forEach((item) => item.classList.add('is-visible'));
+  }
+}
