@@ -975,3 +975,20 @@ h3,h4,h5,h6,nav,.brand-wordmark strong,.brand-wordmark small,button{font-weight:
   .team-profile-copy>p:not(.eyebrow){font-size:15px}
   .recommendation-carousel .recommendation-preview{height:min(420px,58svh);min-height:310px}
 }
+
+
+/* Shared footer social links */
+.site-footer .footer-legal{display:flex;flex-direction:column;align-items:flex-start;gap:14px}
+.site-footer .footer-social-icons{display:flex;flex-direction:row;align-items:center;gap:10px}
+.footer-social-icons a{display:grid;place-items:center;width:34px;height:34px;border:1px solid rgba(255,255,255,.3);border-radius:50%;transition:border-color .2s ease,background-color .2s ease,transform .2s ease}
+.footer-social-icons img{display:block;width:20px;height:20px;object-fit:contain}
+.footer-social-icons a:hover,.footer-social-icons a:focus-visible{border-color:#fff;background:rgba(255,255,255,.1);transform:translateY(-2px)}
+@media(max-width:800px){
+  .site-footer .footer-legal{gap:16px}
+  .site-footer .footer-social-icons{gap:12px}
+  .footer-social-icons a{width:44px;height:44px}
+  .footer-social-icons img{width:22px;height:22px}
+}
+@media(prefers-reduced-motion:reduce){
+  .footer-social-icons a{transition:none}
+}
