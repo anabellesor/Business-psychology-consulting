@@ -450,3 +450,21 @@ h3,h4,h5,h6,nav,.brand-wordmark strong,.brand-wordmark small,button{font-weight:
     margin-right:auto;
   }
 }
+
+
+/* Subtle branded background for the Empowering Businesses hero */
+.hero::before{
+  content:"";
+  position:absolute;
+  z-index:1;
+  inset:50% auto auto 50%;
+  width:min(64vw,560px);
+  aspect-ratio:1;
+  background:url("../favicon.svg") center/contain no-repeat;
+  opacity:.12;
+  transform:translate(-50%,-50%);
+  pointer-events:none;
+}
+@media(max-width:800px){
+  .hero::before{width:min(92vw,500px);opacity:.11}
+}
