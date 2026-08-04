@@ -12,20 +12,44 @@ navigation.addEventListener('click', () => {
   navigation.classList.remove('open');
 });
 
-document.querySelector('#contactForm').addEventListener('submit', (event) => {
-  event.preventDefault();
-  const form = event.currentTarget;
-  const status = document.querySelector('#formStatus');
+const contactForm = document.querySelector('#contactForm');
 
-  if (!form.checkValidity()) {
-    form.reportValidity();
-    status.textContent = 'Please complete all required fields.';
-    return;
-  }
+if (contactForm) {
+  contactForm.addEventListener('submit', async (event) => {
+    event.preventDefault();
+    const form = event.currentTarget;
+    const status = document.querySelector('#formStatus');
+    const submitButton = form.querySelector('button[type="submit"]');
 
-  status.textContent = "Thank you for contacting us. We'll get back to you soon!";
-  form.reset();
-});
+    if (!form.checkValidity()) {
+      form.reportValidity();
+      status.textContent = 'Please complete all required fields.';
+      return;
+    }
+
+    submitButton.disabled = true;
+    submitButton.textContent = 'Sending…';
+    status.textContent = '';
+
+    try {
+      const response = await fetch(form.action, {
+        method: 'POST',
+        body: new FormData(form),
+        headers: { Accept: 'application/json' }
+      });
+
+      if (!response.ok) throw new Error('Submission failed');
+
+      status.textContent = "Thank you for contacting us. Your message has been sent!";
+      form.reset();
+    } catch (error) {
+      status.textContent = 'Sorry, your message could not be sent. Please email contact@businesspsychologyconsulting.com directly.';
+    } finally {
+      submitButton.disabled = false;
+      submitButton.textContent = 'Send';
+    }
+  });
+}
 
 const carousel = document.querySelector('.sample-carousel');
 
