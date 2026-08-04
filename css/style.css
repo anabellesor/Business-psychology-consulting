@@ -825,3 +825,7 @@ h3,h4,h5,h6,nav,.brand-wordmark strong,.brand-wordmark small,button{font-weight:
 
 /* Tighter spacing between multiple recommendation previews */
 .recommendation-preview+.recommendation-preview{margin-top:16px}
+
+
+/* Keep Anabelle's photo level with her role and name */
+.team-profile{align-items:start}
