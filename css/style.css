@@ -245,3 +245,5 @@ input:focus,textarea:focus{border-color:#fff}
 .proquest-button:hover,.proquest-button:focus-visible{background:#333}
 .research-citation{margin:30px 0 0;font-size:13px;line-height:1.6;color:#444}
 @media(max-width:800px){.research-page .site-header{height:82px}.research-page-hero{padding:64px 28px}.research-page-hero h1{font-size:46px}.publication-preview{padding:70px 28px}.publication-card{grid-template-columns:1fr;gap:38px}.publication-cover{min-height:280px}.publication-details h2{font-size:34px}.publication-findings{grid-template-columns:1fr}}
+
+.publication-cover{justify-content:center}
