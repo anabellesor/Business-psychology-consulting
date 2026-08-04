@@ -651,3 +651,7 @@ h3,h4,h5,h6,nav,.brand-wordmark strong,.brand-wordmark small,button{font-weight:
 
 /* Blend the hero into the website's standard background */
 .hero{background:var(--black)}
+
+
+/* Remove the decorative brain mark from the homepage hero */
+.hero::before{content:none;display:none}
