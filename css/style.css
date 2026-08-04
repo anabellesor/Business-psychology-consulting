@@ -616,3 +616,29 @@ h3,h4,h5,h6,nav,.brand-wordmark strong,.brand-wordmark small,button{font-weight:
 /* Lower the brain mark to match the full hero heading height */
 .hero::before{top:39%}
 @media(max-width:800px){.hero::before{top:40%}}
+
+
+/* Match the Wix-style fade animation on the hero logo and plant */
+.hero::before{
+  --hero-decor-opacity:.16;
+  opacity:var(--hero-decor-opacity);
+  animation:hero-decor-fade 1200ms 1ms cubic-bezier(.445,.05,.55,.95) both;
+}
+.hero::after{
+  --hero-decor-opacity:.88;
+  opacity:var(--hero-decor-opacity);
+  animation:hero-decor-fade 1200ms 1ms cubic-bezier(.445,.05,.55,.95) both;
+}
+@keyframes hero-decor-fade{
+  from{opacity:0}
+  to{opacity:var(--hero-decor-opacity)}
+}
+@media(min-width:801px) and (max-width:1050px){.hero::after{--hero-decor-opacity:.76}}
+@media(max-width:800px){
+  .hero::before{--hero-decor-opacity:.14}
+  .hero::after{--hero-decor-opacity:.7}
+}
+@media(max-width:390px){.hero::after{--hero-decor-opacity:.62}}
+@media(prefers-reduced-motion:reduce){
+  .hero::before,.hero::after{animation:none;opacity:var(--hero-decor-opacity)}
+}
