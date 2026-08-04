@@ -767,3 +767,28 @@ h3,h4,h5,h6,nav,.brand-wordmark strong,.brand-wordmark small,button{font-weight:
 @media(max-width:800px){
   .wix-research-intro h2{width:100%;height:auto;min-height:90px;padding:16px 20px}
 }
+
+
+/* Meet the Team page */
+.about-page{background:var(--black)}
+.about-hero{max-width:1100px;margin:0 auto;padding:86px 40px 92px;text-align:center}
+.about-hero h1{margin:0 0 30px;font-size:clamp(52px,6vw,76px);line-height:1;letter-spacing:-.025em}
+.about-hero>p:last-child{max-width:720px;margin:0 auto;font-size:20px;line-height:1.7;color:#ddd}
+.team-section{padding:90px max(40px,calc((100vw - 1020px)/2));background:#f1f0ed;color:#0a0a0a}
+.team-profile{display:grid;grid-template-columns:330px minmax(0,1fr);gap:74px;align-items:center}
+.team-profile-visual{min-height:430px;display:grid;place-items:center;background:#050505}
+.team-profile-visual img{display:block;width:190px;height:190px}
+.team-profile-copy h2{margin:0 0 30px;font-size:clamp(42px,5vw,62px);line-height:1.02}
+.team-profile-copy>p:not(.eyebrow){margin:0 0 20px;font-size:17px;line-height:1.8}
+.team-profile-copy .button{margin-top:18px}
+@media(max-width:800px){
+  .about-hero{padding:64px 24px 72px}
+  .about-hero h1{font-size:clamp(44px,13vw,58px)}
+  .about-hero>p:last-child{font-size:18px}
+  .team-section{padding:64px 24px}
+  .team-profile{grid-template-columns:1fr;gap:42px}
+  .team-profile-visual{min-height:300px}
+  .team-profile-visual img{width:150px;height:150px}
+  .team-profile-copy h2{font-size:clamp(38px,11vw,48px)}
+  .team-profile-copy .button{width:100%}
+}

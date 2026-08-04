@@ -113,7 +113,7 @@ if (!prefersReducedMotion) {
   );
   const observedFadeItems = document.querySelectorAll('.site-footer > *');
   const observedSlideItems = document.querySelectorAll(
-    '.wix-mission > *, .wix-research-intro > *, .wix-research-grid article > *, .wix-research-button, .research-page-hero h1'
+    '.wix-mission > *, .wix-research-intro > *, .wix-research-grid article > *, .wix-research-button, .research-page-hero h1, .about-hero > *, .team-profile'
   );
 
   immediateFadeItems.forEach((item) => item.classList.add('wix-motion-fade'));
