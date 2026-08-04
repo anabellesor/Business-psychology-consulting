@@ -276,3 +276,199 @@ input:focus,textarea:focus{border-color:#fff}
     will-change:auto;
   }
 }
+
+
+/* Business Psychology Consulting brand system */
+:root{
+  --white:#fff;
+  --black:#000;
+  --charcoal:#1d1d1f;
+  --sage:#7d9d8c;
+  --sand:#d9c9a3;
+  --brand-line:rgba(255,255,255,.14);
+  --brand-muted:rgba(255,255,255,.68);
+  --brand-font:-apple-system,BlinkMacSystemFont,"SF Pro Display","SF Pro Text","Helvetica Neue",Arial,sans-serif;
+}
+html{background:#000}
+body{
+  background:#000;
+  color:#fff;
+  font-family:var(--brand-font);
+  font-weight:400;
+  letter-spacing:-.012em;
+  -webkit-font-smoothing:antialiased;
+  text-rendering:optimizeLegibility;
+}
+h1,h2,h3,h4,h5,h6,
+.wix-mission h2,.wix-research-intro h2,.samples-contact .contact-details h2,
+.services-hero h1,.research-page-hero h1,.publication-cover strong,.publication-details h2{
+  font-family:var(--brand-font)!important;
+  font-weight:600;
+}
+::selection{background:var(--sage);color:#000}
+:focus-visible{outline:2px solid var(--sand);outline-offset:4px}
+
+/* Branded navigation and wordmark */
+.site-header,
+.services-page .site-header,
+.research-page .site-header{
+  height:104px;
+  padding:0 40px;
+  background:rgba(0,0,0,.92);
+  border-bottom:1px solid var(--brand-line);
+  box-shadow:0 8px 30px rgba(0,0,0,.24);
+  backdrop-filter:saturate(140%) blur(18px);
+  -webkit-backdrop-filter:saturate(140%) blur(18px);
+}
+.header-brand,.brand-with-logo{gap:13px}
+.brand-logo{width:44px;height:44px}
+.brand-wordmark{display:flex;flex-direction:column;justify-content:center;gap:3px;line-height:1}
+.brand-wordmark strong{font-size:17px;font-weight:500;letter-spacing:.015em;white-space:nowrap}
+.brand-wordmark small{font-size:9px;font-weight:500;letter-spacing:.42em;text-transform:uppercase;color:rgba(255,255,255,.82)}
+nav{gap:42px;font-size:14px;font-weight:500;letter-spacing:.01em}
+nav a{color:rgba(255,255,255,.82);border:0;padding:10px 0;position:relative}
+nav a::after{content:"";position:absolute;left:0;right:0;bottom:3px;height:1px;background:var(--sage);transform:scaleX(0);transform-origin:right;transition:transform .25s ease}
+nav a:hover,nav a:focus-visible,nav a[aria-current="page"]{color:#fff}
+nav a:hover::after,nav a:focus-visible::after,nav a[aria-current="page"]::after{transform:scaleX(1);transform-origin:left}
+
+/* Apple-inspired controls */
+.button,.wix-research-button,.proquest-button,
+.contact form button,.samples-contact form button{
+  min-height:46px;
+  border:1px solid rgba(255,255,255,.56);
+  border-radius:999px;
+  background:transparent;
+  color:#fff;
+  font-family:var(--brand-font);
+  font-size:14px;
+  font-weight:600;
+  letter-spacing:.01em;
+  transition:background-color .25s ease,color .25s ease,border-color .25s ease,transform .25s ease;
+}
+.button:hover,.wix-research-button:hover,.proquest-button:hover,
+.contact form button:hover,.samples-contact form button:hover{
+  background:var(--sage);
+  border-color:var(--sage);
+  color:#000;
+  transform:translateY(-2px);
+}
+
+/* Homepage */
+.hero{background:#000}
+.hero::after{content:"";position:absolute;inset:0;z-index:3;pointer-events:none;background:radial-gradient(circle at 50% 48%,transparent 0,rgba(0,0,0,.08) 44%,rgba(0,0,0,.46) 100%)}
+.hero h1{font-weight:500;letter-spacing:-.055em}
+.hero-copy p{color:rgba(255,255,255,.72)}
+.wix-mission{background:var(--charcoal);color:#fff;border-top:1px solid var(--brand-line);border-bottom:1px solid var(--brand-line)}
+.wix-mission h2{color:#fff}
+.wix-mission>p{color:rgba(255,255,255,.76)}
+.wix-mission::after{content:"";position:absolute;width:10px;height:10px;border-radius:50%;background:var(--sage);right:42px;top:42px;box-shadow:20px 0 0 var(--sand)}
+.wix-research{background-color:#0b0b0c}
+.wix-research::after{content:"";position:absolute;inset:0;pointer-events:none;background:linear-gradient(180deg,rgba(0,0,0,.28),rgba(0,0,0,.64))}
+.wix-research>*{position:relative;z-index:1}
+.wix-research-intro h2 span{background:transparent;color:#fff}
+.wix-research-subtitle{color:var(--sand)}
+.wix-research-lead{color:rgba(255,255,255,.76)}
+.wix-research-grid article{
+  background:rgba(29,29,31,.88);
+  border:1px solid var(--brand-line);
+  box-shadow:0 22px 50px rgba(0,0,0,.24);
+  transition:border-color .25s ease,transform .25s ease,background-color .25s ease;
+}
+.wix-research-grid article:hover{transform:translateY(-5px);border-color:rgba(125,157,140,.78);background:rgba(29,29,31,.97)}
+.wix-research-grid h3{color:var(--sage)}
+.wix-research-label{color:var(--sand)}
+.wix-research-grid article p:last-child{color:rgba(255,255,255,.72)}
+
+/* Contact and forms */
+.samples-contact,.contact{background:var(--charcoal);color:#fff;border-top:1px solid var(--brand-line)}
+.samples-contact .contact-details h2{color:#fff}
+.wix-contact-icon{fill:var(--sage)!important}
+.wix-contact-row p,.wix-contact-row a{color:rgba(255,255,255,.78)}
+.contact form,.samples-contact form{border-left:1px solid var(--brand-line)}
+.contact label,.samples-contact label{color:rgba(255,255,255,.68);font-size:13px;font-weight:500;letter-spacing:.01em}
+.contact input,.contact textarea,.samples-contact input,.samples-contact textarea{
+  background:rgba(0,0,0,.24);
+  color:#fff;
+  border:1px solid rgba(255,255,255,.22);
+  border-radius:12px;
+  padding:13px 14px;
+  transition:border-color .2s ease,box-shadow .2s ease;
+}
+.contact input:focus,.contact textarea:focus,.samples-contact input:focus,.samples-contact textarea:focus{
+  outline:0;
+  border-color:var(--sage);
+  box-shadow:0 0 0 3px rgba(125,157,140,.18);
+}
+.form-status{color:var(--sand)}
+
+/* Services */
+.services-page,.samples-page,.research-page{background:#000}
+.services-hero,.samples-hero,.research-page-hero{background:#000;border-bottom:1px solid var(--brand-line)}
+.services-hero h1,.samples-hero h1,.research-page-hero h1{letter-spacing:-.045em}
+.services-hero p,.samples-hero p,.research-page-hero p{color:var(--brand-muted)}
+.services-panel{background:var(--charcoal)}
+.services-secondary{background:#000}
+.wix-service-card{filter:none}
+.wix-service-card>div{
+  background:#050505;
+  color:#fff;
+  border:1px solid var(--brand-line);
+  border-top:3px solid var(--sage);
+  box-shadow:0 20px 44px rgba(0,0,0,.26);
+}
+.wix-service-card h2{color:#fff;font-weight:600}
+.wix-service-card p{color:rgba(255,255,255,.7)}
+.wix-service-card img{filter:saturate(.72) contrast(1.04);transition:filter .3s ease,transform .3s ease}
+.wix-service-card:hover img{filter:saturate(1) contrast(1.06);transform:scale(1.015)}
+
+/* Samples */
+.marketing-samples{background:#000;color:#fff}
+.marketing-samples h2{letter-spacing:-.045em}
+.sample-carousel-shell{border-top:1px solid var(--brand-line);border-bottom:1px solid var(--brand-line)}
+.sample-slide{background:var(--charcoal);border:1px solid var(--brand-line)}
+.sample-slide img{filter:saturate(.82);transition:filter .25s ease,transform .25s ease}
+.sample-slide:hover img{filter:saturate(1);transform:scale(1.015)}
+.carousel-control,.lightbox-close{background:rgba(29,29,31,.88);color:#fff;border:1px solid var(--brand-line)}
+.sample-play{background:var(--sage);color:#000}
+
+/* Research publication */
+.publication-preview{background:var(--charcoal);color:#fff}
+.publication-card{background:#080808;border:1px solid var(--brand-line);box-shadow:0 28px 70px rgba(0,0,0,.28)}
+.publication-cover{background:linear-gradient(145deg,#101111,var(--charcoal));border:1px solid rgba(125,157,140,.5);color:#fff}
+.publication-cover::before{background:var(--sage)}
+.publication-details h2{color:#fff}
+.publication-meta{color:var(--sand)}
+.publication-summary{color:rgba(255,255,255,.72)}
+.publication-findings article{background:rgba(255,255,255,.035);border:1px solid var(--brand-line)}
+.publication-findings h3{color:var(--sage)}
+.publication-findings p{color:rgba(255,255,255,.7)}
+.proquest-button{background:var(--sage);border-color:var(--sage);color:#000}
+.proquest-button:hover{background:var(--sand);border-color:var(--sand)}
+
+/* Shared footer */
+.site-footer{
+  background:#000;
+  color:#fff;
+  border-top:1px solid var(--brand-line);
+}
+.site-footer .brand-logo{width:48px;height:48px}
+.site-footer .brand-wordmark strong{font-size:18px}
+.site-footer .brand-wordmark small{font-size:9px}
+.site-footer>div>p{color:var(--sand)}
+.site-footer a{color:rgba(255,255,255,.78)}
+.site-footer a:hover{color:var(--sage)}
+.site-footer>p{color:rgba(255,255,255,.5);font-size:13px}
+
+@media(max-width:800px){
+  .site-header,.services-page .site-header,.research-page .site-header{height:82px;padding:0 20px}
+  .brand-logo{width:38px;height:38px}
+  .brand-wordmark strong{font-size:14px}
+  .brand-wordmark small{font-size:7px;letter-spacing:.34em}
+  nav{background:rgba(0,0,0,.98);border-top:1px solid var(--brand-line);box-shadow:0 20px 30px rgba(0,0,0,.36)}
+  .contact form,.samples-contact form{border-left:0;border-top:1px solid var(--brand-line)}
+}
+@media(max-width:430px){
+  .brand-wordmark strong{font-size:13px}
+  .brand-wordmark small{font-size:6.5px}
+  .site-header{padding:0 15px}
+}
