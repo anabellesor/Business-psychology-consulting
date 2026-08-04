@@ -829,3 +829,20 @@ h3,h4,h5,h6,nav,.brand-wordmark strong,.brand-wordmark small,button{font-weight:
 
 /* Keep Anabelle's photo level with her role and name */
 .team-profile{align-items:start}
+
+
+/* LinkedIn recommendations carousel */
+.recommendation-carousel-shell{margin-top:30px;min-width:0}
+.recommendation-carousel-heading{display:flex;align-items:center;justify-content:space-between;gap:20px;margin-bottom:14px}
+.recommendation-carousel-heading .eyebrow{margin:0}
+.recommendation-carousel-controls{display:flex;gap:8px;flex:0 0 auto}
+.recommendation-carousel-controls button{display:grid;place-items:center;width:42px;height:42px;padding:0;border:1px solid #050505;border-radius:50%;background:transparent;color:#050505;font-size:22px;line-height:1;cursor:pointer;transition:background-color .2s ease,color .2s ease,transform .2s ease}
+.recommendation-carousel-controls button:hover,.recommendation-carousel-controls button:focus-visible{background:#050505;color:#fff;transform:translateY(-1px)}
+.recommendation-carousel{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;scrollbar-width:none;overscroll-behavior-x:contain;touch-action:pan-x}
+.recommendation-carousel::-webkit-scrollbar{display:none}
+.recommendation-carousel .recommendation-preview{flex:0 0 100%;margin:0;scroll-snap-align:start;scroll-snap-stop:always}
+.recommendation-carousel .recommendation-preview+.recommendation-preview{margin-top:0}
+@media (max-width:800px){
+  .recommendation-carousel-shell{margin-top:24px}
+  .recommendation-carousel-controls button{width:40px;height:40px}
+}
