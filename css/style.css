@@ -733,3 +733,19 @@ h3,h4,h5,h6,nav,.brand-wordmark strong,.brand-wordmark small,button{font-weight:
 @media(max-width:800px){
   .wix-research-intro h2{width:100%;min-height:90px;padding:16px 20px}
 }
+
+
+/* Keep Why Us as white text directly over the section background */
+.wix-research-intro h2{
+  width:940px;
+  height:83px;
+  min-height:0;
+  padding:0;
+  display:block;
+  background:transparent!important;
+  color:#fff!important;
+}
+.wix-research-intro h2 span{background:transparent!important;color:inherit!important}
+@media(max-width:800px){
+  .wix-research-intro h2{width:auto;height:auto;min-height:0;padding:0}
+}
