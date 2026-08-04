@@ -599,3 +599,8 @@ h3,h4,h5,h6,nav,.brand-wordmark strong,.brand-wordmark small,button{font-weight:
   .hero::before{left:17%;width:125px}
   .hero::after{right:-88px;width:210px;opacity:.62}
 }
+
+
+/* Vertically align the brain mark with the hero heading */
+.hero::before{top:34%}
+@media(max-width:800px){.hero::before{top:35%}}
