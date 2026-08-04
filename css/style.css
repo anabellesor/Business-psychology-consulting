@@ -749,3 +749,21 @@ h3,h4,h5,h6,nav,.brand-wordmark strong,.brand-wordmark small,button{font-weight:
 @media(max-width:800px){
   .wix-research-intro h2{width:auto;height:auto;min-height:0;padding:0}
 }
+
+
+/* Black Why Us title panel with transparent inner text wrapper */
+.wix-research-intro h2{
+  width:634px;
+  height:100px;
+  min-height:100px;
+  padding:16px 32px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#000!important;
+  color:#fff!important;
+}
+.wix-research-intro h2 span{background:none!important;color:#fff!important}
+@media(max-width:800px){
+  .wix-research-intro h2{width:100%;height:auto;min-height:90px;padding:16px 20px}
+}
