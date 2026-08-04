@@ -702,3 +702,9 @@ h3,h4,h5,h6,nav,.brand-wordmark strong,.brand-wordmark small,button{font-weight:
 
 /* Remove underlines from Services card titles */
 .services-page .wix-service-card h2{text-decoration:none}
+
+
+/* Return the Samples hero box to the monochrome palette */
+.samples-page .samples-hero-copy,
+.samples-page .samples-hero-copy:hover{border-top:0}
+.samples-page .samples-hero-copy h1{color:#fff}
