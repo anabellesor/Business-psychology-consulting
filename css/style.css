@@ -992,3 +992,8 @@ h3,h4,h5,h6,nav,.brand-wordmark strong,.brand-wordmark small,button{font-weight:
 @media(prefers-reduced-motion:reduce){
   .footer-social-icons a{transition:none}
 }
+
+
+/* Reliable inline Instagram footer icon */
+.footer-social-icons .footer-social-svg{display:block;width:20px;height:20px;color:#fff}
+@media(max-width:800px){.footer-social-icons .footer-social-svg{width:22px;height:22px}}
