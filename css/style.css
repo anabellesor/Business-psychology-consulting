@@ -677,3 +677,20 @@ h3,h4,h5,h6,nav,.brand-wordmark strong,.brand-wordmark small,button{font-weight:
   text-decoration-thickness:1px;
   text-underline-offset:6px;
 }
+
+
+/* Compact homepage hero with the botanical accent removed */
+.hero{height:620px}
+.hero::after{content:none;display:none}
+.hero-copy{padding-top:28px}
+.hero-copy p{margin:58px 0 36px}
+@media(max-width:800px){
+  .hero{height:540px;min-height:540px}
+  .hero-copy{padding-top:22px}
+  .hero-copy p{margin:38px 0 28px}
+}
+@media(max-width:500px){
+  .hero{height:520px;min-height:520px}
+  .hero-copy{padding-top:18px}
+  .hero-copy p{margin:32px 0 24px}
+}
