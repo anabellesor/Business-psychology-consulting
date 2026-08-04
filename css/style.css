@@ -20,19 +20,19 @@ nav a:hover,nav a:focus-visible{border-color:#fff}
 .button:hover,.button:focus-visible{transform:translateY(-2px)}
 .button-light{background:#fff;color:#111}
 .button-dark{background:#050505;color:#fff}
-.portrait{position:absolute;background-image:url("../images/interview.jpg");background-repeat:no-repeat;background-size:620px auto;z-index:2;filter:saturate(.86)}
-.portrait-one{width:190px;height:255px;left:21%;top:30px;background-position:44% 45%}
-.portrait-two{width:140px;height:140px;left:4%;top:200px;background-position:2% 25%;background-size:430px auto}
-.portrait-three{width:225px;height:190px;right:8%;top:90px;background-position:92% 23%}
-.portrait-four{width:225px;height:225px;left:12%;bottom:75px;background-position:50% 25%;background-size:470px auto}
-.portrait-five{width:140px;height:140px;right:16%;bottom:230px;background-position:10% 30%;background-size:470px auto}
-.portrait-six{width:95px;height:190px;right:-20px;bottom:120px;background-position:94% 20%;background-size:400px auto}
-.mission{min-height:525px;display:grid;place-items:center;position:relative;background:linear-gradient(90deg,rgba(0,0,0,.65),rgba(0,0,0,.25)),url("../images/mountain.jpg") center 48%/cover fixed}
+.portrait{position:absolute;background-repeat:no-repeat;background-position:center;background-size:cover;z-index:2;filter:saturate(.9)}
+.portrait-one{width:190px;height:255px;left:21%;top:30px;background-image:url("../images/wix-construction-worker.jpg")}
+.portrait-two{width:140px;height:140px;left:4%;top:200px;background-image:url("../images/wix-portrait-left.jpg");background-position:62% 38%}
+.portrait-three{width:225px;height:190px;right:8%;top:90px;background-image:url("../images/wix-portrait-right.jpg");background-position:50% 34%}
+.portrait-four{width:225px;height:225px;left:12%;bottom:75px;background-image:url("../images/wix-business-lady.jpg");background-position:center 24%}
+.portrait-five{width:140px;height:140px;right:16%;bottom:230px;background-image:url("../images/wix-man-phone.jpg")}
+.portrait-six{width:95px;height:190px;right:-20px;bottom:120px;background-image:url("../images/wix-cafe-staff.jpg");background-position:55% center}
+.mission{min-height:525px;display:grid;place-items:center;position:relative;background:linear-gradient(90deg,rgba(0,0,0,.65),rgba(0,0,0,.25)),url("../images/wix-landscape.png") center/cover fixed}
 .mission-copy{width:min(650px,calc(100% - 48px));margin-left:35%;background:rgba(0,0,0,.78);padding:60px}
 .eyebrow{text-transform:uppercase;letter-spacing:.2em;font-size:11px;font-weight:500;margin:0 0 20px}
 h2{font-size:clamp(40px,5vw,68px);font-weight:400;letter-spacing:-.05em;line-height:1.05;margin:0 0 30px}
 .mission-copy>p:last-child{font-size:18px;margin:0}
-.research{background:var(--paper);color:#111;padding:105px max(40px,calc((100vw - 1180px)/2));text-align:center}
+.research{background:linear-gradient(rgba(243,242,239,.94),rgba(243,242,239,.94)),url("../images/wix-library.jpg") center/cover;color:#111;padding:105px max(40px,calc((100vw - 1180px)/2));text-align:center}
 .research-intro{max-width:850px;margin:0 auto 70px}
 .research-intro .lead{font-size:20px;margin:0 0 12px}
 .research-intro>p:last-child{max-width:720px;margin:auto}
