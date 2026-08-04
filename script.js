@@ -39,18 +39,43 @@ if (carousel) {
 
   const lightbox = document.querySelector('.sample-lightbox');
   const lightboxImage = lightbox.querySelector('img');
+  const lightboxVideo = lightbox.querySelector('video');
+
+  const stopVideo = () => {
+    lightboxVideo.pause();
+    lightboxVideo.removeAttribute('src');
+    lightboxVideo.load();
+  };
 
   document.querySelectorAll('.sample-slide').forEach((slide) => {
     slide.addEventListener('click', () => {
       const image = slide.querySelector('img');
-      lightboxImage.src = image.src;
-      lightboxImage.alt = image.alt;
+      const videoSource = slide.dataset.videoSrc;
+
+      if (videoSource) {
+        lightboxImage.hidden = true;
+        lightboxVideo.hidden = false;
+        lightboxVideo.src = videoSource;
+      } else {
+        stopVideo();
+        lightboxVideo.hidden = true;
+        lightboxImage.hidden = false;
+        lightboxImage.src = image.src;
+        lightboxImage.alt = image.alt;
+      }
+
       lightbox.showModal();
+      if (videoSource) lightboxVideo.play().catch(() => {});
     });
   });
 
-  document.querySelector('.lightbox-close').addEventListener('click', () => lightbox.close());
+  const closeLightbox = () => {
+    stopVideo();
+    lightbox.close();
+  };
+
+  document.querySelector('.lightbox-close').addEventListener('click', closeLightbox);
   lightbox.addEventListener('click', (event) => {
-    if (event.target === lightbox) lightbox.close();
+    if (event.target === lightbox) closeLightbox();
   });
 }
