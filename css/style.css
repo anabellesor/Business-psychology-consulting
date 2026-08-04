@@ -665,3 +665,15 @@ h3,h4,h5,h6,nav,.brand-wordmark strong,.brand-wordmark small,button{font-weight:
 /* Match the hero subtitle to the Our Mission body typography */
 .hero-copy p{font-size:24px;line-height:1.4}
 @media(max-width:800px){.hero-copy p{font-size:20px;line-height:1.5}}
+
+
+/* Monochrome Services cards with underlined titles */
+.services-page .wix-service-card>div,
+.services-page .wix-service-card:hover>div{border-top:0}
+.services-page .wix-service-card h2{
+  color:#fff;
+  text-decoration:underline;
+  text-decoration-color:#fff;
+  text-decoration-thickness:1px;
+  text-underline-offset:6px;
+}
