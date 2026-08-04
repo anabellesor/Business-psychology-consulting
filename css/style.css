@@ -803,3 +803,11 @@ h3,h4,h5,h6,nav,.brand-wordmark strong,.brand-wordmark small,button{font-weight:
 /* Give the founder role more visual emphasis */
 .team-profile-copy .eyebrow{font-size:14px;font-weight:600;letter-spacing:.16em;line-height:1.5}
 @media(max-width:800px){.team-profile-copy .eyebrow{font-size:13px}}
+
+
+/* Meet the Team profile actions */
+.profile-actions{display:flex;flex-wrap:wrap;gap:14px;margin-top:26px}
+.profile-actions .button{margin-top:0}
+.button-outline{border:1px solid #050505;background:transparent;color:#050505}
+.button-outline:hover,.button-outline:focus-visible{background:#050505;color:#fff}
+@media(max-width:800px){.profile-actions{display:grid}.profile-actions .button{width:100%}}
