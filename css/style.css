@@ -792,3 +792,9 @@ h3,h4,h5,h6,nav,.brand-wordmark strong,.brand-wordmark small,button{font-weight:
   .team-profile-copy h2{font-size:clamp(38px,11vw,48px)}
   .team-profile-copy .button{width:100%}
 }
+
+
+/* Anabelle Sorenson profile headshot */
+.team-profile-visual{overflow:hidden}
+.team-profile-visual img{width:100%;height:100%;object-fit:cover;object-position:center center}
+@media(max-width:800px){.team-profile-visual img{width:100%;height:100%}}
