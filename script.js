@@ -34,18 +34,8 @@ if (carousel) {
     carousel.scrollBy({ left: carousel.clientWidth * direction, behavior: 'smooth' });
   };
 
-  const previousControl = document.querySelector('.carousel-prev');
-  const nextControl = document.querySelector('.carousel-next');
-
-  const updateCarouselControls = () => {
-    previousControl.hidden = carousel.scrollLeft < 5;
-    nextControl.hidden = carousel.scrollLeft + carousel.clientWidth >= carousel.scrollWidth - 5;
-  };
-
-  previousControl.addEventListener('click', () => scrollSamples(-1));
-  nextControl.addEventListener('click', () => scrollSamples(1));
-  carousel.addEventListener('scroll', updateCarouselControls, { passive: true });
-  updateCarouselControls();
+  document.querySelector('.carousel-prev').addEventListener('click', () => scrollSamples(-1));
+  document.querySelector('.carousel-next').addEventListener('click', () => scrollSamples(1));
 
   const lightbox = document.querySelector('.sample-lightbox');
   const lightboxImage = lightbox.querySelector('img');
