@@ -933,3 +933,45 @@ h3,h4,h5,h6,nav,.brand-wordmark strong,.brand-wordmark small,button{font-weight:
   .recommendation-carousel{scroll-behavior:auto}
   .recommendation-carousel-controls button{transition:none}
 }
+
+
+/* Rebalanced About page mobile scale */
+@media (max-width:800px){
+  .about-hero{padding:44px 22px 52px}
+  .about-hero .eyebrow{font-size:11px;line-height:1.5}
+  .about-hero h1{margin-bottom:18px;font-size:clamp(38px,10.5vw,48px);letter-spacing:-.02em}
+  .about-hero>p:last-child{max-width:32rem;font-size:16px;line-height:1.55}
+  .team-section{padding:42px 22px 50px}
+  .team-profile{gap:28px}
+  .team-profile-visual{width:min(78vw,340px);max-width:100%;margin:0 auto;aspect-ratio:1/1}
+  .team-profile-copy .eyebrow{font-size:11px;letter-spacing:.12em;line-height:1.45}
+  .team-profile-copy h2{margin:8px 0 18px;font-size:clamp(32px,8.8vw,42px);line-height:1.08}
+  .team-profile-copy>p:not(.eyebrow){font-size:15.5px;line-height:1.65}
+  .recommendation-carousel-shell{margin-top:22px}
+  .recommendation-carousel-heading{margin-bottom:10px}
+  .recommendation-carousel-heading .eyebrow{font-size:11px}
+  .recommendation-carousel .recommendation-preview{height:min(460px,62svh);min-height:350px;padding:18px}
+  .recommendation-preview>p{font-size:13.5px!important;line-height:1.6!important}
+  .recommendation-preview footer strong{font-size:14px}
+  .recommendation-preview footer span{font-size:12.5px}
+  .profile-actions{margin-top:18px}
+  .profile-actions .button{min-height:48px;font-size:14px}
+}
+
+@media (max-width:480px){
+  .about-hero{padding:38px 18px 44px}
+  .about-hero h1{font-size:clamp(36px,10.5vw,42px)}
+  .team-section{padding:36px 18px 44px}
+  .team-profile{gap:24px}
+  .team-profile-visual{width:min(76vw,300px)}
+  .team-profile-copy h2{font-size:clamp(30px,8.7vw,38px)}
+  .recommendation-carousel .recommendation-preview{height:min(440px,60svh);min-height:330px;padding:17px 15px}
+}
+
+@media (max-width:360px){
+  .about-hero{padding-inline:15px}
+  .team-section{padding-inline:15px}
+  .team-profile-visual{width:min(74vw,270px)}
+  .team-profile-copy>p:not(.eyebrow){font-size:15px}
+  .recommendation-carousel .recommendation-preview{height:min(420px,58svh);min-height:310px}
+}
