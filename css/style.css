@@ -174,3 +174,10 @@ input:focus,textarea:focus{border-color:#fff}
 .wix-research-button:hover,.wix-research-button:focus-visible{background:#e7e7e7}
 @media(max-width:900px){.wix-research{height:auto;min-height:0;padding:70px 28px;background-position:center}.wix-research-intro,.wix-research-grid,.wix-research-button{position:relative;left:auto;right:auto;top:auto;transform:none}.wix-research-intro h2,.wix-research-subtitle,.wix-research-lead{width:auto;height:auto}.wix-research-intro h2{font-size:44px;line-height:1.15}.wix-research-subtitle{margin-top:35px}.wix-research-lead{margin-top:28px}.wix-research-grid{width:100%;height:auto;margin-top:50px;grid-template-columns:1fr 1fr;grid-template-rows:auto}.wix-research-grid::before{left:50%;height:100%}.wix-research-grid::after{display:none}.wix-research-grid article,.wix-research-grid article:nth-child(n+3){padding:42px 24px;border-top:1px solid rgba(255,255,255,.75)}.wix-research-grid h3,.wix-research-grid .wix-research-label,.wix-research-grid article>p:last-child{width:auto;height:auto}.wix-research-button{margin:45px auto 0}}
 @media(max-width:600px){.wix-research-grid{grid-template-columns:1fr}.wix-research-grid::before{display:none}.wix-research-grid article{padding:38px 8px}.wix-research-intro h2{font-size:38px}.wix-research-subtitle{font-size:21px}}
+
+/* Wix research cards use four solid black boxes */
+.wix-research-grid{grid-template-columns:633px 634px;grid-template-rows:328px 304px;column-gap:1px;row-gap:2px}
+.wix-research-grid article{background:#000}
+.wix-research-grid::before,.wix-research-grid::after{display:none}
+@media(max-width:900px){.wix-research-grid{grid-template-columns:1fr 1fr;grid-template-rows:auto;gap:2px}.wix-research-grid article{border:0}}
+@media(max-width:600px){.wix-research-grid{grid-template-columns:1fr}}
