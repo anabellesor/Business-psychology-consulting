@@ -152,3 +152,22 @@ if (!prefersReducedMotion) {
   }
 }
 
+
+
+const recommendationCarousel = document.querySelector('.recommendation-carousel');
+
+if (recommendationCarousel) {
+  const scrollRecommendations = (direction) => {
+    const card = recommendationCarousel.querySelector('.recommendation-preview');
+    const gap = Number.parseFloat(getComputedStyle(recommendationCarousel).gap) || 0;
+    const distance = (card?.getBoundingClientRect().width || recommendationCarousel.clientWidth) + gap;
+
+    recommendationCarousel.scrollBy({
+      left: distance * direction,
+      behavior: 'smooth'
+    });
+  };
+
+  document.querySelector('.recommendation-prev')?.addEventListener('click', () => scrollRecommendations(-1));
+  document.querySelector('.recommendation-next')?.addEventListener('click', () => scrollRecommendations(1));
+}
