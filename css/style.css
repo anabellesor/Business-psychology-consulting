@@ -567,3 +567,35 @@ h3,h4,h5,h6,nav,.brand-wordmark strong,.brand-wordmark small,button{font-weight:
   .brand-wordmark small{font-size:5.5px;letter-spacing:.28em}
   .hero-copy,.wix-mission,.wix-research,.samples-contact,.publication-preview{padding-left:18px;padding-right:18px}
 }
+
+
+/* Refined homepage hero composition: compact logo left, botanical accent right */
+.hero::before{
+  inset:50% auto auto calc(50% - 340px);
+  width:230px;
+  opacity:.16;
+}
+.hero::after{
+  content:"";
+  position:absolute;
+  z-index:2;
+  top:-38px;
+  right:-24px;
+  width:min(34vw,420px);
+  aspect-ratio:720/684;
+  background:url("../images/hero-plant.svg") center/contain no-repeat;
+  opacity:.88;
+  pointer-events:none;
+}
+@media(min-width:801px) and (max-width:1050px){
+  .hero::before{left:16%;width:190px}
+  .hero::after{right:-70px;width:340px;opacity:.76}
+}
+@media(max-width:800px){
+  .hero::before{left:18%;top:51%;width:150px;opacity:.14}
+  .hero::after{top:12px;right:-82px;width:240px;opacity:.7}
+}
+@media(max-width:390px){
+  .hero::before{left:17%;width:125px}
+  .hero::after{right:-88px;width:210px;opacity:.62}
+}
