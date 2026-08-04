@@ -66,3 +66,27 @@ input:focus,textarea:focus{border-color:#fff}
 @media(max-width:800px){.site-header{height:82px;padding:0 22px}.menu-toggle{display:block}nav{display:none;position:absolute;top:82px;left:0;right:0;background:#000;padding:22px;flex-direction:column;gap:14px;border-top:1px solid #333}nav.open{display:flex}.hero{height:700px}.hero h1{font-size:50px}.hero-copy p{margin:75px 0 45px}.portrait-one{left:6%;top:45px;width:120px;height:165px}.portrait-two{display:none}.portrait-three{right:4%;top:85px;width:115px;height:130px}.portrait-four{left:3%;bottom:70px;width:125px;height:160px}.portrait-five{right:3%;bottom:85px}.portrait-six{display:none}.mission{background-attachment:scroll}.mission-copy{margin:0;padding:38px}.research{padding:80px 24px}.research-grid{grid-template-columns:1fr 1fr}.research-grid article:nth-child(2){border-right:0}.research-grid article:nth-child(-n+2){border-bottom:1px solid #999}.services{padding:80px 24px}.service-list article{grid-template-columns:1fr}.contact{padding:80px 24px;grid-template-columns:1fr;gap:60px}.site-footer{padding:45px 24px;grid-template-columns:1fr}}
 @media(max-width:500px){.hero h1{font-size:43px}.research-grid{grid-template-columns:1fr}.research-grid article{border-right:0;border-bottom:1px solid #999!important}.research-grid article:last-child{border-bottom:0!important}.form-row{grid-template-columns:1fr}.mission-copy>p:last-child{font-size:16px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}.button{transition:none}.mission{background-attachment:scroll}}
+
+/* Services page — mirrors the Wix services layout */
+.services-page{background:#000}
+.services-page .site-header{height:118px}
+.services-hero{max-width:950px;margin:0 auto;padding:62px 8px 78px}
+.services-hero h1{font-size:56px;line-height:1;font-weight:500;letter-spacing:-.045em;margin:0 0 46px}
+.services-hero p{max-width:735px;font-size:15px;line-height:1.9;margin:0}
+.services-panel{max-width:1283px;margin:0 auto;background:#262626;padding:60px 129px}
+.services-secondary{max-width:1006px;margin:0 auto;padding:0 0 120px}
+.services-card-grid{display:grid;grid-template-columns:repeat(3,1fr);column-gap:59px;row-gap:40px}
+.wix-service-card{position:relative;min-width:0}
+.wix-service-card img{display:block;width:100%;aspect-ratio:295/323;object-fit:cover}
+.wix-service-card>div{position:relative;margin:-75px -20px 0 20px;min-height:265px;padding:35px 14px;background:#000;color:#fff}
+.wix-service-card h2{font-size:19px;line-height:1.25;letter-spacing:-.02em;font-weight:300;margin:0 0 14px}
+.wix-service-card p{font-size:15px;line-height:1.9;margin:0}
+.services-card-grid .wix-service-card:nth-child(4){grid-column:1}
+.services-secondary .services-card-grid{padding-top:0}
+.services-secondary .wix-service-card>div{margin-top:0;margin-left:20px;margin-right:-20px;padding-top:27px}
+.services-secondary .wix-service-card:nth-child(4){margin-top:70px}
+.services-contact{padding-top:70px;padding-bottom:110px}
+.services-contact .contact-details h2{font-size:56px;font-weight:500;margin-bottom:60px}
+.services-contact address span{display:inline-block;width:45px;font-size:22px}
+@media(max-width:900px){.services-hero{padding:55px 28px 65px}.services-panel{padding:50px 45px}.services-secondary{padding:0 45px 100px}.services-card-grid{column-gap:35px}.wix-service-card>div{margin-right:-10px;margin-left:10px}.services-secondary .wix-service-card>div{margin-left:10px;margin-right:-10px}}
+@media(max-width:700px){.services-page .site-header{height:82px}.services-hero h1{font-size:44px}.services-hero p{line-height:1.7}.services-panel{padding:30px 24px}.services-secondary{padding:0 24px 80px}.services-card-grid{grid-template-columns:1fr;gap:42px}.services-card-grid .wix-service-card:nth-child(4){grid-column:auto}.wix-service-card>div,.services-secondary .wix-service-card>div{margin:-50px 12px 0 24px;min-height:auto;padding:28px 22px}.services-secondary .wix-service-card:nth-child(4){margin-top:0}.services-contact .contact-details h2{font-size:44px}}
