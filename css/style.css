@@ -821,3 +821,7 @@ h3,h4,h5,h6,nav,.brand-wordmark strong,.brand-wordmark small,button{font-weight:
 .recommendation-preview footer span{font-size:13px;color:#ccc}
 .recommendation-preview footer a{width:max-content;max-width:100%;margin-top:8px;font-size:12px;text-decoration:underline;text-underline-offset:3px}
 @media(max-width:800px){.recommendation-preview{padding:22px 20px}.recommendation-preview>p{font-size:14px!important}}
+
+
+/* Tighter spacing between multiple recommendation previews */
+.recommendation-preview+.recommendation-preview{margin-top:16px}
