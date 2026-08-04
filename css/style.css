@@ -642,3 +642,8 @@ h3,h4,h5,h6,nav,.brand-wordmark strong,.brand-wordmark small,button{font-weight:
 @media(prefers-reduced-motion:reduce){
   .hero::before,.hero::after{animation:none;opacity:var(--hero-decor-opacity)}
 }
+
+
+/* Align the top of the brain mark with “Empowering” */
+.hero::before{top:36%}
+@media(max-width:800px){.hero::before{top:37%}}
