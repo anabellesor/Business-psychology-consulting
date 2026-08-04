@@ -846,3 +846,90 @@ h3,h4,h5,h6,nav,.brand-wordmark strong,.brand-wordmark small,button{font-weight:
   .recommendation-carousel-shell{margin-top:24px}
   .recommendation-carousel-controls button{width:40px;height:40px}
 }
+
+
+/* About page responsive optimization */
+.about-page{overflow-x:hidden}
+.about-page main{width:100%;overflow:clip}
+.about-hero{width:min(100%,1100px)}
+.team-section{container-type:inline-size}
+.team-profile{width:100%;max-width:1020px;margin:0 auto}
+.team-profile-visual{width:100%;aspect-ratio:330/430;min-height:0}
+.team-profile-copy{min-width:0}
+.team-profile-copy h2{overflow-wrap:anywhere;text-wrap:balance}
+.team-profile-copy>p:not(.eyebrow){text-wrap:pretty}
+.recommendation-carousel{align-items:stretch}
+.recommendation-carousel .recommendation-preview{height:clamp(390px,42vw,500px);overflow-y:auto;overscroll-behavior-y:contain}
+.recommendation-preview>p,.recommendation-preview footer{max-width:68ch}
+.recommendation-carousel-controls button{min-width:44px;min-height:44px;-webkit-tap-highlight-color:transparent}
+.profile-actions .button{min-height:48px;display:inline-flex;align-items:center;justify-content:center;text-align:center}
+.about-page .samples-contact{width:100%}
+
+@media (max-width:1100px){
+  .about-hero{padding-inline:clamp(28px,5vw,48px)}
+  .team-section{padding:72px clamp(28px,5vw,48px)}
+  .team-profile{grid-template-columns:minmax(260px,34vw) minmax(0,1fr);gap:clamp(36px,6vw,64px)}
+  .team-profile-copy h2{font-size:clamp(40px,5.4vw,56px)}
+}
+
+@media (max-width:800px){
+  .about-hero{padding:clamp(48px,10vw,64px) 24px clamp(56px,11vw,72px)}
+  .about-hero .eyebrow{font-size:12px;letter-spacing:.14em}
+  .about-hero h1{margin-bottom:22px;line-height:1.04;text-wrap:balance}
+  .about-hero>p:last-child{max-width:36rem;font-size:clamp(16px,4.4vw,18px);line-height:1.6;text-wrap:pretty}
+  .team-section{padding:clamp(44px,9vw,64px) clamp(20px,6vw,32px)}
+  .team-profile{grid-template-columns:1fr;gap:32px}
+  .team-profile-visual{max-width:440px;aspect-ratio:1/1;margin:0 auto}
+  .team-profile-copy{width:100%}
+  .team-profile-copy .eyebrow{font-size:12px;letter-spacing:.13em}
+  .team-profile-copy h2{margin-bottom:22px;font-size:clamp(36px,10vw,48px);line-height:1.06}
+  .team-profile-copy>p:not(.eyebrow){font-size:16px;line-height:1.7}
+  .recommendation-carousel-shell{margin-top:26px}
+  .recommendation-carousel-heading{margin-bottom:12px}
+  .recommendation-carousel .recommendation-preview{height:min(520px,68svh);min-height:400px;padding:22px 20px}
+  .recommendation-preview>p{font-size:14px!important;line-height:1.65!important}
+  .recommendation-carousel-controls{gap:10px}
+  .recommendation-carousel-controls button{width:44px;height:44px}
+  .profile-actions{margin-top:22px}
+  .profile-actions .button{width:100%;min-height:52px}
+}
+
+@media (max-width:520px){
+  .about-hero{padding-inline:20px}
+  .about-hero h1{font-size:clamp(40px,12vw,52px)}
+  .team-section{padding-inline:18px}
+  .team-profile{gap:26px}
+  .team-profile-visual{max-width:none}
+  .team-profile-copy h2{font-size:clamp(34px,10.5vw,43px)}
+  .recommendation-carousel-heading{align-items:flex-end}
+  .recommendation-carousel-heading .eyebrow{max-width:calc(100% - 110px);overflow-wrap:anywhere}
+  .recommendation-carousel .recommendation-preview{height:min(500px,65svh);min-height:380px;padding:20px 17px}
+  .recommendation-preview footer{margin-top:16px}
+  .recommendation-preview footer a{font-size:13px;line-height:1.5}
+  .about-page .samples-contact{padding-inline:18px}
+  .about-page .wix-contact-row{min-width:0}
+  .about-page .wix-contact-row p,.about-page .wix-contact-row a{overflow-wrap:anywhere}
+}
+
+@media (max-width:390px){
+  .about-hero{padding-left:16px;padding-right:16px}
+  .team-section{padding:40px 14px 48px}
+  .team-profile-copy .eyebrow{font-size:11px}
+  .team-profile-copy h2{font-size:clamp(32px,10.5vw,39px)}
+  .team-profile-copy>p:not(.eyebrow){font-size:15px}
+  .recommendation-carousel .recommendation-preview{height:min(480px,64svh);min-height:360px;padding:18px 15px}
+  .recommendation-carousel-controls button{width:44px;height:44px}
+  .about-page .samples-contact{padding-left:14px;padding-right:14px}
+}
+
+@media (orientation:landscape) and (max-height:600px) and (max-width:950px){
+  .about-hero{padding-top:38px;padding-bottom:44px}
+  .team-section{padding-top:44px;padding-bottom:48px}
+  .team-profile-visual{max-width:360px}
+  .recommendation-carousel .recommendation-preview{height:72svh;min-height:300px}
+}
+
+@media (prefers-reduced-motion:reduce){
+  .recommendation-carousel{scroll-behavior:auto}
+  .recommendation-carousel-controls button{transition:none}
+}
