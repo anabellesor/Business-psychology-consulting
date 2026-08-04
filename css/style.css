@@ -698,3 +698,7 @@ h3,h4,h5,h6,nav,.brand-wordmark strong,.brand-wordmark small,button{font-weight:
 
 /* Give the homepage hero title more breathing room */
 .hero h1{letter-spacing:-.015em}
+
+
+/* Remove underlines from Services card titles */
+.services-page .wix-service-card h2{text-decoration:none}
