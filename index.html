@@ -1,152 +1,107 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Business psychology consulting that helps organizations build productive, positive workplaces.">
   <title>Business Psychology Consulting</title>
-
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="css/style.css">
 </head>
-
 <body>
+  <header class="site-header">
+    <a class="brand" href="#top">Business psychology consulting</a>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="site-nav">
+      <span></span><span></span><span></span><span class="sr-only">Menu</span>
+    </button>
+    <nav id="site-nav" aria-label="Primary navigation">
+      <a href="#services">Services</a>
+      <a href="#research">Samples</a>
+      <a href="#contact">Contact Us</a>
+    </nav>
+  </header>
 
-<!-- ================= HEADER / HERO ================= -->
-<header class="hero-section">
-  <div class="hero-content">
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="portrait portrait-one" aria-hidden="true"></div>
+      <div class="portrait portrait-two" aria-hidden="true"></div>
+      <div class="portrait portrait-three" aria-hidden="true"></div>
+      <div class="portrait portrait-four" aria-hidden="true"></div>
+      <div class="portrait portrait-five" aria-hidden="true"></div>
+      <div class="portrait portrait-six" aria-hidden="true"></div>
+      <div class="hero-copy">
+        <h1 id="hero-title">Empowering<br>businesses for<br>success</h1>
+        <p>Expertise in enhancing organizational success</p>
+        <a class="button button-light" href="#services">Our Services</a>
+      </div>
+    </section>
 
-    <div class="hero-image">
-      <img src="images/logo.png" alt="Business Psychology Consulting logo">
-    </div>
+    <section class="mission" aria-labelledby="mission-title">
+      <div class="mission-copy">
+        <p class="eyebrow">Our purpose</p>
+        <h2 id="mission-title">Our Mission and Vision</h2>
+        <p>To empower businesses to create productive, positive work environments by leveraging psychological insights to enhance employee &amp; stakeholder satisfaction, engagement, and overall performance.</p>
+      </div>
+    </section>
 
-    <div class="hero-text">
-      <h1>Empowering Businesses for Success</h1>
-      <p>Expertise in enhancing organizational success</p>
-      <a href="#contact" class="btn">Learn More</a>
-    </div>
+    <section id="research" class="research" aria-labelledby="research-title">
+      <div class="research-intro">
+        <p class="eyebrow">Evidence-led consulting</p>
+        <h2 id="research-title">Research and Assessment</h2>
+        <p class="lead">Understanding Your Business</p>
+        <p>Our approach involves in-depth research and assessment to gain insights into your business's unique needs. By understanding your organization's dynamics, we develop targeted strategies to enhance performance and maximize results.</p>
+      </div>
+      <div class="research-grid">
+        <article><span>01</span><h3>Assessment</h3><p class="subtitle">Identifying Key Areas</p><p>Comprehensive assessments reveal opportunities for improvement and help unlock your business's full potential.</p></article>
+        <article><span>02</span><h3>Research</h3><p class="subtitle">Data-Driven Solutions</p><p>Focused research uncovers valuable insights to support confident, informed decision-making.</p></article>
+        <article><span>03</span><h3>Analysis</h3><p class="subtitle">Actionable Recommendations</p><p>Detailed analysis becomes practical guidance and tailored strategies for organizational growth.</p></article>
+        <article><span>04</span><h3>Innovation</h3><p class="subtitle">Continuous Improvement</p><p>We help you embrace change, strengthen adaptability, and stay ahead in a dynamic environment.</p></article>
+      </div>
+      <a class="button button-dark" href="#contact">Explore Our Research</a>
+    </section>
 
-  </div>
-</header>
-
-<!-- ================= MAIN CONTENT ================= -->
-<main>
-
-  <!-- ===== MISSION ===== -->
-  <section id="ourmission" class="mission-section">
-    <div class="mission-bg">
-      <img src="images/mountain.jpg" alt="Mountain landscape">
-    </div>
-
-    <div class="mission-content">
-      <h2>Our Mission and Vision</h2>
-      <h3>Who We Are</h3>
-      <p>
-        We empower businesses to create productive, positive work environments
-        by leveraging psychological insights to enhance employee and stakeholder
-        satisfaction, engagement, and performance.
-      </p>
-    </div>
-  </section>
-
-  <!-- ===== RESEARCH ===== -->
-  <section id="research" class="research-section">
-    <div class="research-bg">
-        <img src="images/desks.jpg" alt="Research">
-    </div>
-
-    <div class="research-content">
-        <h2>Research and Assessment</h2>
-        <h3>Understanding Your Business</h3>
-        <p>
-            We conduct in-depth research and assessments to understand your
-            organization's unique needs and develop targeted strategies that
-            maximize performance and results.
-        </p>
-    </div>
-</section>
-    
-  <!-- ===== ABOUT ===== -->
- <section id="about" class="about-section">
-    <div class="about-bg">
-        <img src="images/interviewbw.png" alt="About Us">
-    </div>
-
-    <div class="about-content">
-        <h2>About Us</h2>
-        <h3>Empowering Businesses Through Psychology</h3>
-        <p>
-            At Business Psychology Consulting, we help organizations improve
-            performance, leadership, and employee wellbeing through
-            evidence-based psychological principles.
-        </p>
-    </div>
-</section>
-
-  <!-- ===== SERVICES ===== -->
-  
-<section id="services" class="services-section">
-
-    <div class="services-bg">
-        <img src="images/services.png" alt="Our Services Background">
-    </div>
-
-    <div class="services-content">
-        <h2>Our Services</h2>
-
-        <div class="services-grid">
-
-            <article>
-                <h3>Organizational Psychology</h3>
-                <p>Improve structure, efficiency, and engagement.</p>
-            </article>
-
-            <article>
-                <h3>Employee Wellness</h3>
-                <p>Support mental health, balance, and resilience.</p>
-            </article>
-
-            <article>
-                <h3>Leadership Development</h3>
-                <p>Strengthen communication and decision-making.</p>
-            </article>
-
+    <section id="services" class="services" aria-labelledby="services-title">
+      <div class="services-copy">
+        <p class="eyebrow">What we do</p>
+        <h2 id="services-title">Our Services</h2>
+        <div class="service-list">
+          <article><h3>Organizational Psychology</h3><p>Improve structure, efficiency, culture, and engagement.</p></article>
+          <article><h3>Employee Wellness</h3><p>Support mental health, balance, resilience, and performance.</p></article>
+          <article><h3>Leadership Development</h3><p>Strengthen communication, confidence, and decision-making.</p></article>
         </div>
-    </div>
+      </div>
+    </section>
 
-</section>
-
-  <!-- ===== CONTACT ===== -->
-  <section id="contact" class="contact-section">
-    <div class="container">
-      <h2>Contact Us</h2>
-
-      <form>
-        <label>
-          Full Name
-          <input type="text" required>
-        </label>
-
-        <label>
-          Email Address
-          <input type="email" required>
-        </label>
-
-        <label>
-          Message
-          <textarea rows="4" required></textarea>
-        </label>
-
-        <button type="submit" class="btn">Send Message</button>
+    <section id="contact" class="contact" aria-labelledby="contact-title">
+      <div class="contact-details">
+        <p class="eyebrow">Let's talk</p>
+        <h2 id="contact-title">Contact</h2>
+        <address>
+          <p>Daytona Beach, Florida 32114</p>
+          <p><a href="tel:+14077961485">(407) 796-1485</a></p>
+          <p><a href="mailto:contact@businesspsychologyconsulting.com">contact@businesspsychologyconsulting.com</a></p>
+        </address>
+      </div>
+      <form id="contactForm">
+        <div class="form-row">
+          <label>First Name<input id="firstName" name="firstName" type="text" autocomplete="given-name" required></label>
+          <label>Last Name<input id="lastName" name="lastName" type="text" autocomplete="family-name" required></label>
+        </div>
+        <label>Email<input id="email" name="email" type="email" autocomplete="email" required></label>
+        <label>Message<textarea id="message" name="message" rows="5" required></textarea></label>
+        <button class="button button-light" type="submit">Send</button>
+        <p id="formStatus" class="form-status" role="status" aria-live="polite"></p>
       </form>
-    </div>
-  </section>
+    </section>
+  </main>
 
-</main>
-
-<!-- ================= FOOTER ================= -->
-<footer class="site-footer">
-  <p>&copy; 2026 Business Psychology Consulting. All rights reserved.</p>
-</footer>
-
-<script src="script.js"></script>
+  <footer class="site-footer">
+    <div><a class="brand" href="#top">Business psychology consulting</a><p>Empowering Businesses for Success</p></div>
+    <div><a href="tel:+14077961485">407-796-1485</a><a href="mailto:contact@businesspsychologyconsulting.com">contact@businesspsychologyconsulting.com</a></div>
+    <p>© 2026 Business Psychology Consulting.</p>
+  </footer>
+  <script src="script.js"></script>
 </body>
 </html>
