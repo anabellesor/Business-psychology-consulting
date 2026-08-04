@@ -313,3 +313,19 @@ input:focus,textarea:focus{border-color:#fff}
   .brand-wordmark strong{font-size:12px}
   .brand-wordmark small{font-size:6px}
 }
+
+
+/* Branding green accents for Services cards */
+.services-page .wix-service-card>div{
+  border-top:4px solid #7d9d8c;
+  box-shadow:0 16px 34px rgba(0,0,0,.24);
+  transition:border-color .25s ease,transform .25s ease;
+}
+.services-page .wix-service-card h2{
+  color:#7d9d8c;
+  font-weight:500;
+}
+.services-page .wix-service-card:hover>div{
+  border-top-color:#91ad9e;
+  transform:translateY(-3px);
+}
