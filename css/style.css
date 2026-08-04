@@ -468,3 +468,102 @@ h3,h4,h5,h6,nav,.brand-wordmark strong,.brand-wordmark small,button{font-weight:
 @media(max-width:800px){
   .hero::before{width:min(92vw,500px);opacity:.11}
 }
+
+
+/* Final mobile optimization layer — keeps every page fluid and faithful */
+@media(max-width:800px){
+  html,body{width:100%;max-width:100%;overflow-x:hidden}
+  img,video,iframe{max-width:100%}
+  .site-header{width:100%;height:82px;padding:0 18px;gap:12px}
+  .header-brand{max-width:calc(100% - 58px)}
+  .brand-logo{width:34px;height:34px}
+  .brand-wordmark{overflow:hidden}
+  .brand-wordmark strong{overflow:hidden;text-overflow:ellipsis}
+  .menu-toggle{min-width:44px;min-height:44px}
+  nav{max-height:calc(100dvh - 82px);overflow-y:auto}
+  nav a{min-height:44px;display:flex;align-items:center}
+
+  .hero{width:100%;height:min(722px,calc(100svh - 82px));min-height:590px}
+  .hero-copy{padding:35px 22px 0}
+  .hero h1{font-size:clamp(42px,13vw,58px);overflow-wrap:anywhere}
+  .hero-copy p{margin:72px 0 42px}
+
+  .wix-mission{height:auto;min-height:0;padding:64px 24px;background-position:center}
+  .wix-mission h2,.wix-mission>p{position:static;width:auto;height:auto}
+  .wix-mission h2{font-size:clamp(40px,12vw,52px);line-height:1.08;margin:0 0 42px}
+  .wix-mission>p{font-size:20px;line-height:1.5}
+
+  .wix-research{height:auto;min-height:0;padding:64px 24px 72px;background-position:center}
+  .wix-research-intro{position:static}
+  .wix-research-intro h2,.wix-research-subtitle,.wix-research-lead{width:auto;height:auto}
+  .wix-research-intro h2{font-size:clamp(40px,12vw,52px);line-height:1.08}
+  .wix-research-subtitle{margin:28px auto 0;font-size:21px;line-height:1.4}
+  .wix-research-lead{margin:22px auto 0;font-size:16px;line-height:1.6}
+  .wix-research-grid{position:static;width:100%;height:auto;margin:48px 0 36px;display:grid;grid-template-columns:1fr;grid-template-rows:none;gap:0}
+  .wix-research-grid::before,.wix-research-grid::after{display:none}
+  .wix-research-grid article{min-width:0;padding:34px 0;border-top:1px solid rgba(255,255,255,.75)}
+  .wix-research-grid article:last-child{border-bottom:1px solid rgba(255,255,255,.75)}
+  .wix-research-grid h3,.wix-research-grid .wix-research-label,.wix-research-grid article>p:last-child{width:auto;height:auto}
+  .wix-research-grid h3{font-size:22px;line-height:1.4}
+  .wix-research-grid .wix-research-label{margin-top:18px}
+  .wix-research-grid article>p:last-child{margin-top:14px}
+  .wix-research-button{position:static;width:min(100%,220px);height:52px;margin:0 auto;transform:none}
+
+  .services-page .services-hero{height:auto;padding:56px 24px 64px}
+  .services-page .services-hero>div{position:static;width:auto}
+  .services-page .services-hero h1{height:auto;font-size:clamp(42px,12vw,52px);line-height:1.08;margin-bottom:28px}
+  .services-page .services-hero p{width:auto;height:auto;line-height:1.7}
+  .services-page .services-panel,.services-page .services-secondary{width:100%;height:auto;padding:44px 24px 68px}
+  .services-page .services-secondary{padding-top:0}
+  .services-page .services-panel .services-card-grid,.services-page .services-secondary .services-card-grid{width:100%;display:grid;grid-template-columns:minmax(0,1fr);grid-template-rows:none;gap:52px;margin:0}
+  .services-page .wix-service-card{width:100%;max-width:380px;height:auto;margin:0 auto}
+  .services-page .wix-service-card img{width:100%;height:auto;aspect-ratio:295/323}
+  .services-page .wix-service-card>div,.services-page .services-secondary .wix-service-card>div{position:relative;left:auto;top:auto;width:calc(100% - 16px);min-height:0;margin:-70px 0 0 16px;padding:30px 18px 24px}
+  .services-page .wix-service-card h2,.services-page .wix-service-card p{width:auto;height:auto}
+
+  .samples-hero{min-height:0;padding:24px}
+  .samples-hero>img{width:100%;max-width:none;height:auto;aspect-ratio:16/9}
+  .samples-hero-copy{position:relative;inset:auto;width:auto;max-width:none;min-height:0;margin:-28px 12px 0;padding:40px 24px}
+  .samples-hero-copy h1{font-size:clamp(40px,12vw,50px)}
+  .marketing-samples{padding:52px 0 68px}
+  .marketing-intro{padding:0 24px}
+  .sample-carousel-wrap{padding:0 24px}
+  .sample-slide{flex-basis:100%}
+
+  .samples-contact{width:100%;min-height:0;padding:64px 24px;display:grid;grid-template-columns:minmax(0,1fr);gap:48px}
+  .samples-contact .contact-details h2{height:auto;font-size:clamp(40px,12vw,52px);line-height:1.08}
+  .wix-contact-list{margin-top:42px;grid-template-rows:none;gap:20px}
+  .wix-contact-row{grid-template-columns:25px minmax(0,1fr);column-gap:20px}
+  .wix-contact-row p{white-space:normal;overflow-wrap:anywhere}
+  .samples-contact form{width:100%;height:auto;margin:0;padding:0}
+  .samples-contact .form-row{grid-template-columns:1fr;gap:18px;margin-bottom:18px}
+  .samples-contact .form-row label,.samples-contact form>label:nth-of-type(1),.samples-contact textarea{width:100%}
+  .samples-contact input{min-height:44px}
+  .samples-contact textarea{height:120px;min-height:120px}
+  .samples-contact form>button{float:none;width:100%;height:46px;margin-top:14px}
+
+  .services-page .wix-footer{position:static;width:100%;height:auto;margin:0;padding:56px 24px;display:grid;grid-template-columns:1fr;gap:30px;border-top:1px solid var(--line)}
+  .services-page .wix-footer-brand,.services-page .wix-footer-tagline,.services-page .wix-footer-contact,.services-page .wix-footer-x,.services-page .wix-footer-links{position:static;width:auto;height:auto}
+  .services-page .wix-footer-tagline{font-size:32px;line-height:1.12;margin:8px 0}
+  .services-page .wix-footer-contact,.services-page .wix-footer-links{gap:8px}
+  .services-page .wix-footer-copyright{width:100%;height:auto;padding:16px 24px 28px;text-align:left}
+
+  .research-page-hero{padding:60px 24px 68px}
+  .research-page-hero h1{font-size:clamp(42px,12vw,52px)}
+  .research-page-hero p{font-size:17px}
+  .publication-preview{padding:64px 24px}
+  .publication-card{grid-template-columns:1fr;gap:38px}
+  .publication-cover{min-height:280px}
+  .publication-details h2{font-size:clamp(32px,9vw,40px);overflow-wrap:anywhere}
+  .publication-findings{grid-template-columns:1fr}
+  .proquest-button{width:100%;min-height:50px}
+
+  .site-footer{width:100%;padding:48px 24px;grid-template-columns:1fr;gap:32px}
+}
+@media(max-width:390px){
+  .site-header{padding-inline:14px}
+  .brand-logo{width:30px;height:30px}
+  .brand-wordmark strong{font-size:11px}
+  .brand-wordmark small{font-size:5.5px;letter-spacing:.28em}
+  .hero-copy,.wix-mission,.wix-research,.samples-contact,.publication-preview{padding-left:18px;padding-right:18px}
+}
