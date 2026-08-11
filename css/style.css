@@ -997,3 +997,15 @@ h3,h4,h5,h6,nav,.brand-wordmark strong,.brand-wordmark small,button{font-weight:
 /* Reliable inline Instagram footer icon */
 .footer-social-icons .footer-social-svg{display:block;width:20px;height:20px;color:#fff}
 @media(max-width:800px){.footer-social-icons .footer-social-svg{width:22px;height:22px}}
+
+
+/* Gina Kim public relations profile */
+.team-profile-secondary{margin-top:76px;padding-top:76px;border-top:1px solid rgba(5,5,5,.2)}
+.team-profile-secondary .team-profile-visual{background:#d7d7d7}
+.team-profile-secondary .team-profile-visual img{object-position:center 32%}
+@media(max-width:800px){
+  .team-profile-secondary{margin-top:52px;padding-top:52px}
+}
+@media(max-width:480px){
+  .team-profile-secondary{margin-top:40px;padding-top:40px}
+}
