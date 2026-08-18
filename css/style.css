@@ -144,7 +144,7 @@ input:focus,textarea:focus{border-color:#fff}
 .samples-contact label{display:block;font-size:14px;line-height:14px}
 .samples-contact .form-row{display:grid;grid-template-columns:202px 202px;gap:18px;margin:0 0 14px}
 .samples-contact .form-row label{width:202px}
-.samples-contact input,.samples-contact textarea{display:block;width:100%;margin-top:9px;padding:8px 10px;border:1px solid #fff;background:#000;color:#fff;font-size:14px;line-height:19px}
+.samples-contact input,.samples-contact textarea{display:block;width:100%;margin-top:9px;padding:8px 10px;border:1px solid #fff;border-radius:12px;background:#000;color:#fff;font-size:14px;line-height:19px}
 .samples-contact input{height:37px}
 .samples-contact form>label:nth-of-type(1){width:421px;margin-bottom:18px}
 .samples-contact textarea{width:421px;height:86px;min-height:86px;resize:none}
