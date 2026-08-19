@@ -75,11 +75,25 @@
     </section>
 
     <section class="view" id="crm" aria-labelledby="crm-title">
-      <div class="section-heading"><div><p class="eyebrow">Module</p><h2 id="crm-title">Sales CRM</h2></div><span class="status">Google Sheet connection pending</span></div>
+      <div class="section-heading"><div><p class="eyebrow">Module</p><h2 id="crm-title">Sales CRM</h2></div><span class="status connected">Live Google Sheet connected</span></div>
       <ol class="workflow" aria-label="Sales workflow">
         <li>Find</li><li>Research</li><li>Verify email</li><li>Approve</li><li>Send</li><li>Follow up</li><li>Reply</li><li>Qualify</li><li>Meet</li><li>Won / Lost</li>
       </ol>
-      <div class="empty-state compact"><h3>No private prospect data is displayed</h3><p>The live Google Sheet will remain the source of truth until a secure server-side connector is implemented. Email opens remain unavailable without a consent-aware tracking provider.</p></div>
+      <div class="crm-access-note">
+        <div><strong>Access-controlled workspace</strong><p>Sign in with a Google account that has permission to the master CRM. The Sheet remains the source of truth for approvals, follow-ups, replies, and outcomes.</p></div>
+        <a class="crm-open-button" href="https://docs.google.com/spreadsheets/d/17ohN8N_C8J54A_lTX8icMCtzMeDAB8zLsQCmQFx11KY/edit#gid=1067454422" target="_blank" rel="noopener">Open Live CRM</a>
+      </div>
+      <div class="crm-frame-wrap">
+        <iframe
+          class="crm-frame"
+          title="Business Psychology Consulting live Google Sheets CRM"
+          src="https://docs.google.com/spreadsheets/d/17ohN8N_C8J54A_lTX8icMCtzMeDAB8zLsQCmQFx11KY/edit?rm=minimal#gid=1067454422"
+          loading="lazy"
+          referrerpolicy="no-referrer"
+          allow="clipboard-read; clipboard-write"
+        ></iframe>
+      </div>
+      <p class="tracking-note">Email opens remain unavailable unless a consent-aware tracking provider is connected. Gmail send and reply activity should not be treated as proof of an open.</p>
     </section>
   </main>
 
