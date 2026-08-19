@@ -24,6 +24,7 @@
       <button class="nav-item" data-view="feedback">360 Feedback</button>
       <button class="nav-item" data-view="collection">Data Collection</button>
       <button class="nav-item" data-view="analytics">Analytics</button>
+      <button class="nav-item" data-view="billing">Payments</button>
       <button class="nav-item" data-view="crm">CRM</button>
     </nav>
     <div class="topbar-actions"><button id="account-button" class="account-button" type="button" aria-haspopup="dialog" aria-expanded="false">Sign in</button><a class="website-link" href="../index.html">Company website</a></div>
@@ -44,8 +45,9 @@
         <button class="module-card" data-open="feedback"><span>02</span><h3>360 Feedback</h3><p>Collect customer, employee, supervisor, peer, and management perspectives through role-based surveys.</p></button>
         <button class="module-card" data-open="collection"><span>03</span><h3>Research Data Collection</h3><p>Prepare tablet-friendly questionnaires and QR-accessible instruments for field and workplace research.</p></button>
         <button class="module-card" data-open="analytics"><span>04</span><h3>Analytics & Insights</h3><p>Turn validated organizational data into decision-ready dashboards, research findings, and recommendations.</p></button>
-        <button class="module-card" data-open="crm"><span>05</span><h3>Sales CRM</h3><p>Support the approved workflow from verified lead research through outreach, follow-up, qualification, and outcome.</p></button>
-        <a class="module-card consultation" href="https://calendly.com/anabellesor" target="_blank" rel="noopener"><span>06</span><h3>Book a Consultation</h3><p>Discuss tailored organizational research, assessments, training, and analytics with Anabelle Sorenson, Ph.D.</p></a>
+        <button class="module-card" data-open="billing"><span>05</span><h3>Customer Payments</h3><p>Subscribe, pay invoices, update payment methods, and manage billing through a secure hosted portal.</p></button>
+        <button class="module-card" data-open="crm"><span>06</span><h3>Sales CRM</h3><p>Support the approved workflow from verified lead research through outreach, follow-up, qualification, and outcome.</p></button>
+        <a class="module-card consultation" href="https://calendly.com/anabellesor" target="_blank" rel="noopener"><span>07</span><h3>Book a Consultation</h3><p>Discuss tailored organizational research, assessments, training, and analytics with Anabelle Sorenson, Ph.D.</p></a>
       </div>
     </section>
 
@@ -77,7 +79,7 @@
       <div class="demo-banner"><strong>Illustrative dashboard</strong><p>The values below are intentionally labeled example data. They demonstrate the reporting interface and are not Business Psychology Consulting or client results.</p></div>
       <div class="analytics-grid">
         <figure class="chart-card">
-          <figcaption><span>Workforce experience</span><strong>Example engagement dimensions</strong></figcaption>
+          <figcaption><span>Performance metrics</span><strong>Example organizational performance dimensions</strong></figcaption>
           <div class="bar-chart" role="img" aria-label="Example horizontal bar chart: role clarity 82, manager support 74, team trust 79, growth 67, workload 61">
             <div><span>Role clarity</span><i style="--value:82%"></i><b>82</b></div>
             <div><span>Manager support</span><i style="--value:74%"></i><b>74</b></div>
@@ -85,7 +87,7 @@
             <div><span>Growth</span><i style="--value:67%"></i><b>67</b></div>
             <div><span>Workload</span><i style="--value:61%"></i><b>61</b></div>
           </div>
-          <p class="chart-note">Illustrative index · 0–100</p>
+          <p class="chart-note">Illustrative performance index · 0–100</p>
         </figure>
 
         <figure class="chart-card">
@@ -123,6 +125,21 @@
           <a href="https://calendly.com/anabellesor" target="_blank" rel="noopener">Discuss an analytics project</a>
         </article>
       </div>
+    </section>
+
+
+    <section class="view" id="billing" aria-labelledby="billing-title">
+      <div class="section-heading"><div><p class="eyebrow">Customer portal</p><h2 id="billing-title">Payments & Subscriptions</h2></div><span class="status" id="billing-status">Secure checkout setup</span></div>
+      <div class="billing-intro">
+        <div><h3>Simple, automatic monthly billing</h3><p>Choose a service plan or open the secure billing portal to manage payment methods, invoices, and subscription status. Business Psychology Consulting does not receive or store your complete card number.</p></div>
+        <button class="billing-manage" type="button" data-billing-link="portal">Manage existing billing</button>
+      </div>
+      <div class="plan-grid">
+        <article class="plan-card"><p class="eyebrow">Essentials</p><h3>$499<span>/month</span></h3><p>For smaller organizations building a consistent feedback and performance-measurement process.</p><ul><li>Monthly employee or customer survey</li><li>Up to 25 active participants</li><li>One onboarding checklist</li><li>Performance metrics dashboard</li><li>Monthly summary</li></ul><button type="button" data-billing-link="essentials">Subscribe securely</button></article>
+        <article class="plan-card featured"><p class="eyebrow">Growth</p><h3>$899<span>/month</span></h3><p>For growing organizations that need training, multi-rater feedback, and continuing insights.</p><ul><li>Up to 75 participants</li><li>Onboarding and training portal</li><li>Quarterly 360 feedback cycle</li><li>Employee and customer feedback</li><li>Monthly performance dashboard</li><li>One monthly consultation</li></ul><button type="button" data-billing-link="growth">Subscribe securely</button></article>
+        <article class="plan-card"><p class="eyebrow">Strategic Insights</p><h3>$1,499<span>/month</span></h3><p>For organizations requiring customized measurement, research, and strategic interpretation.</p><ul><li>Up to 200 participants</li><li>Multiple stakeholder groups</li><li>Customized assessments</li><li>Advanced performance analytics</li><li>Quarterly research report</li><li>Priority consultation and support</li></ul><button type="button" data-billing-link="strategic">Subscribe securely</button></article>
+      </div>
+      <div class="payment-trust"><strong>Secure payment handling</strong><p>Checkout opens on the payment processor’s encrypted page. Subscription activation is confirmed only after the processor verifies payment.</p><a href="mailto:businesspsychologyllc@gmail.com?subject=Custom%20service%20proposal">Request a custom proposal</a></div>
     </section>
 
     <section class="view" id="crm" aria-labelledby="crm-title">
@@ -166,6 +183,7 @@
   <script src="config.js"></script>
   <script src="app.js"></script>
   <script src="auth.js"></script>
+  <script src="billing.js"></script>
   <script src="../chat-agent.js" defer></script>
 </body>
 </html>
