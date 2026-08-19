@@ -26,7 +26,7 @@
       <button class="nav-item" data-view="analytics">Analytics</button>
       <button class="nav-item" data-view="crm">CRM</button>
     </nav>
-    <a class="website-link" href="../index.html">Company website</a>
+    <div class="topbar-actions"><button id="account-button" class="account-button" type="button" aria-haspopup="dialog" aria-expanded="false">Sign in</button><a class="website-link" href="../index.html">Company website</a></div>
   </header>
 
   <main id="workspace">
@@ -34,7 +34,7 @@
       <p class="eyebrow">Business Psychology Consulting Workspace</p>
       <h1>Better mindset.<br>Better decisions.<br><span>Better business.</span></h1>
       <p>A private-ready foundation for HR training, multi-rater feedback, research data collection, analytics, and client services.</p>
-      <div class="notice" role="note"><strong>Development checkpoint:</strong> Authentication and live company data are not connected yet. This interface shows no fabricated clients, activity, revenue, or results.</div>
+      <div class="notice" role="note"><strong>Secure account foundation:</strong> Contextual access supports employees, supervisors, stakeholders, customers, researchers, and administrators without forcing one permanent role on each person.</div>
     </section>
 
     <section class="view active" id="overview" aria-labelledby="overview-title">
@@ -57,10 +57,12 @@
     <section class="view" id="feedback" aria-labelledby="feedback-title">
       <div class="section-heading"><div><p class="eyebrow">Module</p><h2 id="feedback-title">360 Feedback</h2></div><span class="status">Awaiting authentication</span></div>
       <div class="role-grid">
-        <article><h3>Customer</h3><p>Capture service experience and relationship feedback.</p></article>
-        <article><h3>Employee</h3><p>Measure workplace experience, engagement, and satisfaction.</p></article>
-        <article><h3>Supervisor & Peer</h3><p>Collect structured behavioral and competency observations.</p></article>
-        <article><h3>Management</h3><p>Review aggregated patterns and development priorities.</p></article>
+        <article><h3>Employee</h3><p>Complete assigned training and provide workplace feedback.</p></article>
+        <article><h3>Supervisor & Peer</h3><p>Provide structured observations only for assigned relationships.</p></article>
+        <article><h3>Management</h3><p>Review authorized aggregate patterns and development priorities.</p></article>
+        <article><h3>Stakeholder</h3><p>Contribute project, partner, or organizational perspectives.</p></article>
+        <article><h3>Customer</h3><p>Share service feedback through a secure, limited invitation.</p></article>
+        <article><h3>Research Participant</h3><p>Complete approved instruments without receiving wider account access.</p></article>
       </div>
       <div class="empty-state compact"><h3>No feedback cycles are active</h3><p>Responses will remain private and role permissions will be enforced after the secure backend is connected.</p></div>
     </section>
@@ -146,12 +148,24 @@
     </section>
   </main>
 
+  <dialog id="auth-dialog" class="auth-dialog" aria-labelledby="auth-title">
+    <button id="auth-close" class="auth-close" type="button" aria-label="Close sign in">×</button>
+    <div class="auth-brand"><img src="../favicon.svg" alt="" width="50" height="50"><div><strong>Business Psychology</strong><small>CONSULTING</small></div></div>
+    <p class="eyebrow">Secure workspace</p><h2 id="auth-title">Sign in to your account</h2>
+    <p>Your access adapts to each organization, project, and feedback assignment.</p>
+    <form id="auth-form"><label>Email<input name="email" type="email" autocomplete="username" required></label><label>Password<input name="password" type="password" autocomplete="current-password" required></label><button type="submit">Sign in</button></form>
+    <p id="auth-message" class="auth-message" role="status"></p>
+  </dialog>
+  <aside id="account-panel" class="account-panel" hidden aria-label="Account and access context"></aside>
+
   <footer>
     <div><strong>Business Psychology Consulting</strong><p>Empowering Businesses for Success</p></div>
     <div><a href="tel:+14077961485">(407) 796-1485</a><a href="mailto:businesspsychologyllc@gmail.com">businesspsychologyllc@gmail.com</a><a href="https://businesspsychologyconsulting.com">businesspsychologyconsulting.com</a></div>
     <p>© 2026 Business Psychology Consulting.</p>
   </footer>
+  <script src="config.js"></script>
   <script src="app.js"></script>
+  <script src="auth.js"></script>
   <script src="../chat-agent.js" defer></script>
 </body>
 </html>
