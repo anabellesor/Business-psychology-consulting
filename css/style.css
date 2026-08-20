@@ -1022,3 +1022,48 @@ h3,h4,h5,h6,nav,.brand-wordmark strong,.brand-wordmark small,button{font-weight:
 .managed-services-cta{max-width:1180px;margin:18px auto 0;padding:34px;display:flex;align-items:center;justify-content:space-between;gap:35px;border-radius:18px;background:#050505;color:#fff}.managed-services-cta h3{margin:8px 0;font-size:30px}.managed-services-cta p:last-child{max-width:720px;margin:0;color:#bbb}
 .website-chart-grid{max-width:1180px;margin:auto;display:grid;grid-template-columns:1fr 1fr;gap:18px}.website-chart-grid figure{margin:0;padding:32px;border:1px solid #333;border-radius:18px;background:#111}.website-chart-grid figcaption{display:grid;gap:5px;margin-bottom:28px}.website-chart-grid figcaption span{color:#7d9d8c;font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase}.website-chart-grid figcaption strong{font-size:22px}.website-bars{display:grid;gap:15px}.website-bars div{display:grid;grid-template-columns:145px 1fr 28px;gap:12px;align-items:center;font-size:12px}.website-bars span{color:#ccc}.website-bars i{position:relative;height:10px;border-radius:999px;background:#2b2b2b;overflow:hidden}.website-bars i::after{content:"";position:absolute;inset:0 auto 0 0;width:var(--value);border-radius:999px;background:#fff}.website-bars b{text-align:right}.website-line-chart{display:block;width:100%;height:auto}.web-chart-grid path{fill:none;stroke:#333}.web-trend-area{fill:rgba(125,157,140,.15)}.web-trend-line{fill:none;stroke:#fff;stroke-width:3}.web-trend-points circle{fill:#7d9d8c}.example-summary{color:#aaa}.example-summary strong{color:#fff;font-size:30px}.analytics-disclaimer{max-width:1180px;margin:18px auto 0;padding:24px 28px;border:1px solid #3d4d45;border-radius:18px;background:#101713;color:#c8d2cd;line-height:1.65}.copyright-notice{max-width:390px;font-size:11px!important;line-height:1.5;color:#888!important}
 @media(max-width:800px){.managed-service-grid,.website-chart-grid{grid-template-columns:1fr}.managed-services,.analytics-preview{padding:70px 22px}.managed-services-cta{align-items:flex-start;flex-direction:column}.managed-services-cta .button{width:100%;text-align:center}.website-bars div{grid-template-columns:115px 1fr 25px}}
+
+
+/* Example reporting now follows the Samples page layout */
+.samples-reporting{
+  padding:72px 0 88px;
+  background:#000;
+  color:#fff;
+  border-top:1px solid rgba(255,255,255,.18);
+  border-bottom:1px solid rgba(255,255,255,.18);
+}
+.samples-reporting .analytics-preview-heading{
+  max-width:1060px;
+  margin:0 auto 38px;
+  padding:0 24px;
+  text-align:left;
+}
+.samples-reporting .analytics-preview-heading h2{
+  margin:10px 0 20px;
+  font-size:48px;
+  font-weight:500;
+  line-height:1.08;
+  letter-spacing:-.035em;
+}
+.samples-reporting .analytics-preview-heading>p:last-child{
+  max-width:680px;
+  margin:0;
+  font-size:15px;
+  line-height:1.8;
+  color:#d0d0d0;
+}
+.samples-reporting .website-chart-grid{
+  max-width:1060px;
+  padding:0 24px;
+}
+.samples-reporting .website-chart-grid figure{
+  background:#151515;
+  border-color:rgba(255,255,255,.22);
+}
+.samples-reporting .analytics-disclaimer{
+  max-width:1012px;
+}
+@media(max-width:800px){
+  .samples-reporting{padding:58px 0 70px}
+  .samples-reporting .analytics-preview-heading h2{font-size:42px}
+}
