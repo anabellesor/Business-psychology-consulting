@@ -1067,3 +1067,46 @@ h3,h4,h5,h6,nav,.brand-wordmark strong,.brand-wordmark small,button{font-weight:
   .samples-reporting{padding:58px 0 70px}
   .samples-reporting .analytics-preview-heading h2{font-size:42px}
 }
+
+
+/* Samples analytics carousel */
+.samples-reporting .analytics-carousel-wrap{max-width:1110px;padding:0 50px}
+.samples-reporting .analytics-carousel{gap:18px;overscroll-behavior-x:contain;touch-action:pan-x}
+.samples-reporting .analytics-slide{
+  flex:0 0 100%;
+  min-height:430px;
+  margin:0;
+  padding:38px;
+  border:1px solid rgba(255,255,255,.22);
+  border-radius:18px;
+  background:#151515;
+  scroll-snap-align:start;
+  scroll-snap-stop:always;
+}
+.samples-reporting .analytics-slide figcaption{display:grid;gap:6px;margin-bottom:30px}
+.samples-reporting .analytics-slide figcaption span{color:#7d9d8c;font-size:11px;font-weight:700;letter-spacing:.15em;text-transform:uppercase}
+.samples-reporting .analytics-slide figcaption strong{font-size:clamp(22px,3vw,30px);line-height:1.2}
+.feedback-summary{display:grid;gap:18px}
+.feedback-overview{display:flex;align-items:baseline;gap:12px}
+.feedback-overview strong{font-size:44px;line-height:1;color:#fff}
+.feedback-overview span{color:#bbb;font-size:14px}
+.feedback-progress{height:10px;border-radius:999px;background:#2b2b2b;overflow:hidden}
+.feedback-progress i{display:block;width:var(--value);height:100%;border-radius:inherit;background:#7d9d8c}
+.feedback-groups{display:grid;border-top:1px solid #333}
+.feedback-groups div{display:flex;justify-content:space-between;gap:20px;padding:12px 2px;border-bottom:1px solid #333}
+.feedback-groups span{color:#d6d6d6}
+.feedback-groups b{font-size:13px}
+.feedback-privacy{margin:4px 0 0;padding:16px 18px;border-radius:14px;background:#101713;color:#c8d2cd;font-size:13px;line-height:1.55}
+.samples-reporting .analytics-disclaimer{margin-top:22px}
+@media(max-width:800px){
+  .samples-reporting .analytics-carousel-wrap{padding:0 36px}
+  .samples-reporting .analytics-slide{min-height:420px;padding:28px 24px}
+  .samples-reporting .website-bars div{grid-template-columns:105px 1fr 24px;gap:8px}
+}
+@media(max-width:480px){
+  .samples-reporting .analytics-carousel-wrap{padding:0 28px}
+  .samples-reporting .analytics-slide{min-height:400px;padding:24px 18px}
+  .samples-reporting .analytics-slide figcaption{margin-bottom:24px}
+  .feedback-overview strong{font-size:38px}
+}
+@media(prefers-reduced-motion:reduce){.samples-reporting .analytics-carousel{scroll-behavior:auto}}
