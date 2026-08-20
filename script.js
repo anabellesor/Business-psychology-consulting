@@ -51,17 +51,28 @@ if (contactForm) {
   });
 }
 
-const carousel = document.querySelector('.sample-carousel');
+document.querySelectorAll('.sample-carousel-wrap').forEach((wrap) => {
+  const carousel = wrap.querySelector('.sample-carousel');
+  const previousButton = wrap.querySelector('.carousel-prev');
+  const nextButton = wrap.querySelector('.carousel-next');
 
-if (carousel) {
+  if (!carousel || !previousButton || !nextButton) return;
+
   const scrollSamples = (direction) => {
-    carousel.scrollBy({ left: carousel.clientWidth * direction, behavior: 'smooth' });
+    const firstSlide = carousel.firstElementChild;
+    const gap = Number.parseFloat(getComputedStyle(carousel).gap) || 0;
+    const distance = (firstSlide?.getBoundingClientRect().width || carousel.clientWidth) + gap;
+    carousel.scrollBy({ left: distance * direction, behavior: 'smooth' });
   };
 
-  document.querySelector('.carousel-prev').addEventListener('click', () => scrollSamples(-1));
-  document.querySelector('.carousel-next').addEventListener('click', () => scrollSamples(1));
+  previousButton.addEventListener('click', () => scrollSamples(-1));
+  nextButton.addEventListener('click', () => scrollSamples(1));
+});
 
-  const lightbox = document.querySelector('.sample-lightbox');
+const marketingCarousel = document.querySelector('.marketing-samples .sample-carousel');
+const lightbox = document.querySelector('.sample-lightbox');
+
+if (marketingCarousel && lightbox) {
   const lightboxImage = lightbox.querySelector('img');
   const lightboxVideo = lightbox.querySelector('video');
 
@@ -71,7 +82,7 @@ if (carousel) {
     lightboxVideo.load();
   };
 
-  document.querySelectorAll('.sample-slide').forEach((slide) => {
+  marketingCarousel.querySelectorAll('.sample-slide').forEach((slide) => {
     slide.addEventListener('click', () => {
       const image = slide.querySelector('img');
       const videoSource = slide.dataset.videoSrc;
@@ -98,12 +109,11 @@ if (carousel) {
     lightbox.close();
   };
 
-  document.querySelector('.lightbox-close').addEventListener('click', closeLightbox);
+  lightbox.querySelector('.lightbox-close')?.addEventListener('click', closeLightbox);
   lightbox.addEventListener('click', (event) => {
     if (event.target === lightbox) closeLightbox();
   });
 }
-
 
 const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
