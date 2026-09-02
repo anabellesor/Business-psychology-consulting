@@ -181,3 +181,73 @@ if (recommendationCarousel) {
   document.querySelector('.recommendation-prev')?.addEventListener('click', () => scrollRecommendations(-1));
   document.querySelector('.recommendation-next')?.addEventListener('click', () => scrollRecommendations(1));
 }
+
+const positionHeroGrowthLine = () => {
+  const svg = document.querySelector('.hero-growth-line');
+  const headline = document.querySelector('.hero-copy h1');
+  const supportingCopy = document.querySelector('.hero-copy > p');
+
+  if (!svg || !headline || !supportingCopy) return;
+
+  const svgRect = svg.getBoundingClientRect();
+  const headlineRect = headline.getBoundingClientRect();
+  const copyRect = supportingCopy.getBoundingClientRect();
+  if (!svgRect.width || !svgRect.height) return;
+
+  const scaleX = 1280 / svgRect.width;
+  const scaleY = 600 / svgRect.height;
+  const toX = (value) => (value - svgRect.left) * scaleX;
+  const toY = (value) => (value - svgRect.top) * scaleY;
+  const left = toX(headlineRect.left);
+  const right = toX(headlineRect.right);
+  const width = right - left;
+  const openTop = toY(headlineRect.bottom) + 12 * scaleY;
+  const openBottom = toY(copyRect.top) - 12 * scaleY;
+  const gap = Math.max(18, openBottom - openTop);
+  const peakOne = openTop + gap * .72;
+  const peakTwo = openTop + gap * .45;
+  const peakThree = openTop + gap * .18;
+  const valley = openBottom - 2;
+
+  const points = [
+    [-30, 545],
+    [Math.max(70, left - 230), 510],
+    [Math.max(120, left - 135), 530],
+    [left - 38, peakOne],
+    [left + width * .12, valley],
+    [left + width * .34, peakOne],
+    [left + width * .49, valley],
+    [left + width * .68, peakTwo],
+    [left + width * .80, valley],
+    [right - 28, peakThree],
+    [right + 32, valley],
+    [right + 86, Math.max(78, openTop - 105)],
+    [right + 155, Math.max(110, openTop - 55)],
+    [1280, 55]
+  ];
+
+  const pathData = points.map(([x, y], index) => `${index ? 'L' : 'M'}${x.toFixed(1)} ${y.toFixed(1)}`).join(' ');
+  svg.querySelectorAll('.hero-growth-line-base,.hero-growth-line-draw,.hero-growth-line-sweep').forEach((path) => {
+    path.setAttribute('d', pathData);
+  });
+
+  const markerPoints = [points[3], points[5], points[7], points[9], points[11]];
+  svg.querySelectorAll('.hero-growth-points circle').forEach((circle, index) => {
+    const point = markerPoints[index];
+    if (!point) return;
+    circle.setAttribute('cx', point[0].toFixed(1));
+    circle.setAttribute('cy', point[1].toFixed(1));
+  });
+
+  svg.style.visibility = 'visible';
+};
+
+let heroLineResizeFrame;
+const queueHeroLinePosition = () => {
+  cancelAnimationFrame(heroLineResizeFrame);
+  heroLineResizeFrame = requestAnimationFrame(positionHeroGrowthLine);
+};
+
+positionHeroGrowthLine();
+document.fonts?.ready.then(positionHeroGrowthLine);
+window.addEventListener('resize', queueHeroLinePosition, { passive: true });
