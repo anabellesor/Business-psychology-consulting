@@ -148,7 +148,7 @@ input:focus,textarea:focus{border-color:#fff}
 .samples-contact input{height:37px}
 .samples-contact form>label:nth-of-type(1){width:421px;margin-bottom:18px}
 .samples-contact textarea{width:421px;height:86px;min-height:86px;resize:none}
-.samples-contact form>button{float:right;width:117px;height:36px;margin-top:9px;padding:0;border:0;border-radius:0;background:#fff;color:#000;font-size:14px;cursor:pointer}
+.samples-contact form>button{float:right;width:117px;height:36px;margin-top:9px;padding:0;border:0;border-radius:999px;background:#fff;color:#000;font-size:14px;cursor:pointer}
 .samples-contact .form-status{clear:both;margin:0;min-height:0;font-size:12px}
 @media(max-width:1100px){.samples-contact{padding:60px max(40px,calc((100vw - 900px)/2));grid-template-columns:360px 458px;gap:50px}}
 @media(max-width:900px){.samples-contact{min-height:0;padding:70px 40px;grid-template-columns:1fr;gap:40px}.samples-contact form{margin-top:0}.wix-contact-list{margin-top:35px}}
